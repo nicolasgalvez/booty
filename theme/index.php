@@ -20,13 +20,13 @@ get_header();?>
 					endif;
 				endwhile;
 			else :
-				get_template_part('loop', 'empty');
+				//get_template_part('loop', 'empty');
 			endif;
 			?>
 				<?php get_template_part('template-part', 'pagination');?>
 			</div>
 			<div id = "sidebar" class = "col-md-3">
-				<?php get_sidebar();?>
+				<?php //get_sidebar();?>
 			</div>
 		</div>
 	</section>
