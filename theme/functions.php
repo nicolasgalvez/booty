@@ -149,7 +149,7 @@
 	 * Displays meta information for a post
 	 * @return void
 	 */
-	function booty_post_meta() {
+	function booty_entry_meta() {
 
 			echo '<i class = "glyphicon glyphicon-time"></i> ' . get_the_time(get_option('date_format')) . '.';
 
@@ -357,12 +357,28 @@
 		}
 
 	}
-	function ncg_get_thumb($size) {
-		global $post;
-		$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post -> ID), $size);
-		echo $thumb['0'];
-	}
+	function booty_post_thumbnail() {
+		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+			return;
+		}
+		if ( is_singular() ) :
+		?>
+			<div class="post-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div><!-- .post-thumbnail -->
 
+			<?php else : ?>
+
+			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+				<?php
+					the_post_thumbnail( 'post-thumbnail', array( 'alt' => get_the_title() ) );
+				?>
+			</a>
+		<?php endif; // End is_singular()		
+			//global $post;
+			//$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post -> ID), $size);
+			//echo $thumb['0'];
+	}
 	/**
 	 * ACF slider support. Uses 'get_field' to look for an image.
 	 * returns true if image found, else checks for a thumbnail image to use.
@@ -378,7 +394,7 @@
 		}
 
 		if (has_post_thumbnail()) {
-			ncg_get_thumb();
+			booty_post_thumbnail();
 			return true;
 		} else
 			return false;

@@ -8,21 +8,10 @@
  */
 ?>
 
-			</div>
-<footer id = "colophon">
-	<div class = "container">
-		<ul class="footer-widgets row"><?php
-			if ( function_exists( 'dynamic_sidebar' ) ) :
-				dynamic_sidebar( 'footer-sidebar' );
-			endif; ?>
-		</ul>
-	</div>
-	<div class = "container">
-		<div class = "row">
+			</div> <!-- End #site -->
+		<footer id = "colophon">
 			<p>Copyright &copy; <?php echo date('Y')?> <?php bloginfo('name'); ?></p>
-		</div>
-	</div>
-</footer>
+		</footer>
 		<?php wp_footer(); ?>
 	</body>
 </html>

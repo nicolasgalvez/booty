@@ -27,28 +27,31 @@
 	</head>
 	<body id = "top" <?php body_class(); ?>>
 		<div class="site">
-			<header class="site-header">
-				<div class = "container">
-					<div class = "row">
-				    		<a id="site-title" class="col-md-3" href="<?php echo site_url()?>">
-				            	<?php if (get_header_image()) : ?>
-									<img id = "header-image" class = "img-responsive" 
-									src="<?php echo get_header_image(); ?>" 
-									alt="<?php echo bloginfo('site_title'); ?>" />				
-								<?php else: ?>
-								<?php echo bloginfo('site_title')?>
-								<?php endif; ?>
-				            </a>
-						<div class = "col-md-9">
-							<?php if ( function_exists( 'dynamic_sidebar' ) ) : ?>
-								<div class="header-widgets">
-									<ul class = "row">
-									<?php dynamic_sidebar('header-widgets'); ?> 
-								</ul>
-								</div>
-							<?php endif; ?> 
-							<?php get_template_part('templates/menu'); ?>
-						</div>
-					</div>
-				</div>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
+			<header class="site-header" role="banner">
+				<?php    /**
+					* Displays a navigation menu
+					* @param array $args Arguments
+					*/
+					$args = array(
+						'theme_location' => '',
+						'menu' => '',
+						'container' => 'div',
+						'container_class' => 'menu-{menu-slug}-container',
+						'container_id' => '',
+						'menu_class' => 'menu',
+						'menu_id' => '',
+						'echo' => true,
+						'fallback_cb' => 'wp_page_menu',
+						'before' => '',
+						'after' => '',
+						'link_before' => '',
+						'link_after' => '',
+						'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+						'depth' => 0,
+						'walker' => ''
+					);
+				
+					wp_nav_menu( $args );
+					?>	
 			</header>
