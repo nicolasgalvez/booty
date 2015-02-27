@@ -1,0 +1,61 @@
+/**
+ * Cosmos theme styles
+ */
+
+.glow {
+	border-color: rgba(215, 237, 255, 0.42);
+	box-shadow: 0 0 20px rgba(207, 247, 188, 0.57), 0 0 200px rgba(0, 0, 0, 0.67) inset;
+	background: rgba(7, 44, 11, 0.5);
+}
+@mixin innerBorder () {
+	margin-bottom: 20px;
+	padding: 10px;
+	border:1px solid;
+	border-radius: 6px;
+	@extend .glow;
+	}
+
+body {
+	background-image: url('../images/bg.jpg');
+}
+
+.site-header nav {
+	background: rgba(0, 0, 0, 0.81);
+	border-bottom: 1px solid rgba(239, 239, 239, 0.51);
+	margin-bottom: 20px;
+	box-shadow: 0 0 12px $brand-primary, -3px -3px 26px rgba(255, 0, 0, 0.26) inset;
+}
+
+.navbar-toggle {
+	border-color: $brand-primary;
+	.icon-bar {
+		background-color: $brand-primary;
+	}
+}
+
+#content {
+	@extend .container;
+}
+
+#primary {
+	@extend .col-md-8;
+	article {
+		margin-bottom: 20px;
+		@extend .row;
+		@include innerBorder();
+	}
+}
+#secondary {
+	@extend .col-md-4;
+	&>ul {
+		margin-top: 0;
+		padding: 0 10px;
+		@extend .row; //
+		&>li {
+			list-style: none;
+			margin-bottom: 20px;
+			@extend .col-xs-12;
+			@include innerBorder();
+		}
+	}
+}

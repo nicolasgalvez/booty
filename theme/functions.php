@@ -428,3 +428,7 @@ function bootstrap3_comment_form( $args ) {
         </div>';
     return $args;
 }
+
+/**
+ * Hack for removing open sans during dev
+ */

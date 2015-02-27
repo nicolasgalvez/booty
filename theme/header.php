@@ -30,13 +30,18 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
 			<header class="site-header" role="banner">
 				<nav>
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
+				<div class="navbar-header">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse"
 	                        data-target=".navbar-collapse">
 	                    <span class="sr-only">Toggle navigation</span>
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
+	                <a id="site-title" class="navbar-brand" href="<?php echo site_url()?>">
+						<?php echo bloginfo('site_title')?>
+                	</a>
+	            </div>
 	                <?php    
 						/**
 						* Displays a navigation menu

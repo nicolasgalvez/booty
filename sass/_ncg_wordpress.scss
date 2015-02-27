@@ -1,0 +1,21 @@
+/**
+ * WordPress Styles
+ * This contains the basic WordPress rules found in most themes.
+ */
+
+.skip-link, .screen-reader-text {
+	display: none;
+}
+
+/**
+ * Image styles
+ */
+
+article {
+	figure {
+		max-width: 100%;
+	}
+	img {
+		@extend .img-responsive;
+	}
+}
