@@ -13,7 +13,7 @@
 	 */
 	// require_once "lib/templ.class.php";
 	// require_once "lib/ncg_walker_comment.php";
-	// require_once "lib/wp_bootstrap_navwalker.php";
+	require_once "lib/wp-bootstrap-navwalker/wp_bootstrap_navwalker.php";
 
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size( 300, 200, array( 'center', 'center')  ); // 300 pixels wide by 200 pixels tall, crop from the center

@@ -29,29 +29,32 @@
 		<div class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
 			<header class="site-header" role="banner">
-				<?php    /**
-					* Displays a navigation menu
-					* @param array $args Arguments
-					*/
-					$args = array(
-						'theme_location' => '',
-						'menu' => '',
-						'container' => 'div',
-						'container_class' => 'menu-{menu-slug}-container',
-						'container_id' => '',
-						'menu_class' => 'menu',
-						'menu_id' => '',
-						'echo' => true,
-						'fallback_cb' => 'wp_page_menu',
-						'before' => '',
-						'after' => '',
-						'link_before' => '',
-						'link_after' => '',
-						'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
-						'depth' => 0,
-						'walker' => ''
-					);
-				
-					wp_nav_menu( $args );
+				<nav>
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+	                        data-target=".navbar-collapse">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <?php    
+						/**
+						* Displays a navigation menu
+						* @param array $args Arguments
+						*/
+						$args = array(
+							'menu' => 'main-menu',
+							'theme_location' => 'main-menu',
+							'depth' => 2,
+							'container' => 'div',
+							'container_class' => 'collapse navbar-collapse',
+							'container_id' => 'navbar-collapse',
+							'menu_class' => 'nav navbar-nav',
+							'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+							'walker' => new wp_bootstrap_navwalker()
+						);
+					
+						wp_nav_menu( $args );
 					?>	
+				</nav>
 			</header>

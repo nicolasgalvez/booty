@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 				options : {
 					style : 'expanded'
 				},
-				src : 'theme/sass/theme.scss',
+				src : 'sass/theme.scss',
 				dest : 'theme/css/theme.css'
 			},
 			prod : {
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 		// watch for changes
 		watch : {
 			scss : {
-				files : ['theme/sass/**/*.scss'],
+				files : ['sass/**/*.scss'],
 				tasks : ['sass:dev', 'notify:scss']
 			},
 			js : {
