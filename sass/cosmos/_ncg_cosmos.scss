@@ -19,8 +19,30 @@
 	@extend .glow;
 	}
 
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+#colophon {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+// Wow! So space! Many Stars.
+body:not(".home") {
 	background-image: url('../images/bg.jpg');
+}
+.admin-bar {
+	margin-top: 32px;
 }
 
 .site-header nav {
@@ -36,35 +58,38 @@ body {
 		background-color: $brand-primary;
 	}
 }
-
+#description {
+	font-size: 10px;
+}
 #content {
 	@extend .container;
 }
 
 #primary {
-	@extend .col-md-8;
+	@extend .col-md-10;
 	article {
 		margin-bottom: 20px;
 		@extend .row;
-		@extend .background;
+		@extend .glow;
 		//@include innerBorder();
 	}
 }
 #secondary {
-	@extend .col-md-4;
+	@extend .col-md-2;
 	&>ul {
 		margin-top: 0;
 		padding: 0 10px;
-		@extend .row; //
+		@extend .row;
 		&>li {
 			list-style: none;
 			margin-bottom: 20px;
+			padding: 10px 6px;
 			@extend .col-xs-12;
-			@include innerBorder();
+			border-left: 1px solid 1px solid rgba(255, 255, 255, 0.48);
+			@extend .glow;
 		}
 	}
 }
-
 
 /**
  * Post rules
@@ -72,10 +97,10 @@ body {
 
 article {
 	.entry-header {
-	@extend .col-xs-12;
+		@extend .col-xs-12;
 	}
 	// Make post-content full width if no thumb.
-	&:not(.has-post-thumbnail) .entry-content {
+	.entry-content {
 		@extend .col-xs-12;
 	}
 
@@ -83,14 +108,14 @@ article {
 }
 
 // Archive title rules
-header.entry-header h2 {
+header.entry-header h2, header.entry-header h1 {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.50);
 	padding: 5px 0;
 	font-family: "michromaregular";
 	text-transform: uppercase;
+	text-shadow: 0 0 17px #fff;
 	a {
 		color: #fff;
-		text-shadow: 0 0 17px #fff;
 	}
 }
 
@@ -102,12 +127,12 @@ header.entry-header h2 {
 // Featured image rules
 // Archive
 
-.has-post-thumbnail {
+body:not(.single) .has-post-thumbnail {
 	.entry-content {
-		@extend .col-xs-6;
+		@extend .col-sm-6, .col-md-8;
 	}
 	.post-thumbnail {
-		@extend .col-xs-6;
+		@extend .col-sm-6, .col-md-4;
 	}
 }
 
@@ -132,3 +157,46 @@ header.entry-header h2 {
 		}
 	}
 }
+
+/**
+ * Sidebar
+ */
+
+#secondary {
+}
+
+ .widget {
+ 	.widgettitle {
+ 		font-size: 15px;
+ 		font-size: 20px;
+		margin: 0 0 6px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+		a {
+			color: #fff;
+		}
+ 	}
+ 	ul {
+		padding: 0 6px;
+		li {
+			margin: 6px 0;
+			padding: 0 4px;
+			list-style: none;
+			font-size: 11px;
+			/* border-left: 1px solid rgba(255, 255, 255, 0.22); */
+			line-height: 11px;
+			font-family: $font-family-monospace;
+		}
+	}
+ }
+
+ /**
+  * Sometimes the home page
+  */
+ .home-su {
+ 	 .su-posts {
+ 		@extend .row;
+	 }
+	 .su-post {
+	 	@extend .col-md-4
+	 }
+ }

@@ -9,6 +9,16 @@
 
 	define('FS_METHOD','direct');
 
+	add_filter( 'pre_get_posts', 'my_get_posts' );
+
+	function my_get_posts( $query ) {
+
+		if ( is_home() && $query->is_main_query() )
+			$query->set( 'post_type', array( 'post', 'track', 'project' ) );
+
+		return $query;
+	}
+
 	/**
 	 * Include library files like walkers, etc.
 	 * @todo gitify and move to vendors. Manage with composer.
@@ -369,11 +379,11 @@
 			return;
 		}
 		if ( is_singular() ) :
+			return; // lets just do this for now.
 		?>
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
-			
-
+			</div><!-- .post-thumbnail -->
 			<?php else : ?>
 			<div class="post-thumbnail">
 				<a href="<?php the_permalink(); ?>" aria-hidden="true">
@@ -438,5 +448,11 @@ function bootstrap3_comment_form( $args ) {
 }
 
 /**
- * Hack for removing open sans during dev
+ * Remove the damn admin bar margin
  */
+
+add_action('get_header', 'my_filter_head');
+
+  function my_filter_head() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+  }

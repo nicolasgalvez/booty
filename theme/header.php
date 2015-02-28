@@ -38,9 +38,13 @@
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <a id="site-title" class="navbar-brand" href="<?php echo site_url()?>">
-						<?php echo bloginfo('site_title')?>
-                	</a>
+	                <div class = "navbar-brand">
+		                <a id="site-title" class="" href="<?php echo site_url()?>">
+							<?php echo bloginfo('site_title')?>
+	                	</a>
+	                	<span id="description"><?php echo bloginfo('description')?></span>	                
+	                </div>
+
 	            </div>
 	                <?php    
 						/**
@@ -54,7 +58,7 @@
 							'container' => 'div',
 							'container_class' => 'collapse navbar-collapse',
 							'container_id' => 'navbar-collapse',
-							'menu_class' => 'nav navbar-nav',
+							'menu_class' => 'nav navbar-nav navbar-right',
 							'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
 							'walker' => new wp_bootstrap_navwalker()
 						);

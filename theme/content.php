@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-			if ( is_single() ) :
+			if ( is_single() || is_page() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
 				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
@@ -27,7 +27,7 @@
 	?>
 	<div class="entry-content">
 		<?php
-			if ( is_single() ) :
+			if ( is_single() || is_page() ) :
 				/* translators: %s: Name of current post */
 				the_content( sprintf(
 					__( 'Continue reading %s', 'booty' ),
@@ -55,7 +55,7 @@
 
 	<?php
 		// Author bio.
-		if ( is_single() && get_the_author_meta( 'description' ) ) :
+		if ( is_single() || is_page() && get_the_author_meta( 'description' ) ) :
 			get_template_part( 'author-bio' );
 		endif;
 
