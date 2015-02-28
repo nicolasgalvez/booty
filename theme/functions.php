@@ -7,6 +7,8 @@
 	 * @since booty 1.0
 	 */
 
+	define('FS_METHOD','direct');
+
 	/**
 	 * Include library files like walkers, etc.
 	 * @todo gitify and move to vendors. Manage with composer.
@@ -150,15 +152,20 @@
 	 * @return void
 	 */
 	function booty_entry_meta() {
-
-			echo '<i class = "glyphicon glyphicon-time"></i> ' . get_the_time(get_option('date_format')) . '.';
-
-		if(get_the_category_list(', ')) {
-			echo ' Posted in '. get_the_category_list(', ') . '.';
+		echo '<div class = "meta-time">';
+			echo '<i class = "glyphicon glyphicon-time"></i> Ansible Telemetry: <br>' . get_the_time(get_option('date_format')) . '.';
+			edit_post_link(__(' (edit)', 'booty'), '<br><span class="edit-link"><i class = "glyphicon glyphicon-pencil"></i> ', '</span>');
+		echo '</div>'; // meta-time
+		if(get_the_category_list()) {
+			echo '<div class = "meta-category">';
+			echo '<p>OS/Meta-Classification:</p>'. get_the_category_list();
+			echo '</div>'; // meta-category
 		}
-		echo get_the_tag_list(' <i class = "glyphicon glyphicon-tags"></i> ', ', ');
-
-		edit_post_link(__(' (edit)', 'booty'), '<br><span class="edit-link"><i class = "glyphicon glyphicon-pencil"></i> ', '</span>');
+		if(get_the_tag_list()) {
+			echo '<div class = "meta-tags">';
+			echo get_the_tag_list('<p><i class = "glyphicon glyphicon-tags"></i> OS/tag/parse:</p><ul><li>','</li><li>','</li></ul>');
+			echo '</div>'; // meta-tags
+		}
 	}
 
 	/**
@@ -365,15 +372,16 @@
 		?>
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
+			
 
 			<?php else : ?>
-
-			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-				<?php
-					the_post_thumbnail( 'post-thumbnail', array( 'alt' => get_the_title() ) );
-				?>
-			</a>
+			<div class="post-thumbnail">
+				<a href="<?php the_permalink(); ?>" aria-hidden="true">
+					<?php
+						the_post_thumbnail( 'post-thumbnail', array( 'alt' => get_the_title() ) );
+					?>
+				</a>
+			</div><!-- .post-thumbnail -->
 		<?php endif; // End is_singular()		
 			//global $post;
 			//$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post -> ID), $size);

@@ -19,20 +19,29 @@
 				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 			endif;
 		?>
-		<?php booty_entry_meta(); ?>
+		
 	</header><!-- .entry-header -->
 	<?php
-		// Post thumbnail.
+	// Post thumbnail.
 		booty_post_thumbnail();
 	?>
 	<div class="entry-content">
 		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s', 'booty' ),
-				the_title( '<span class="screen-reader-text">', '</span>', false )
-			) );
-			
+			if ( is_single() ) :
+				/* translators: %s: Name of current post */
+				the_content( sprintf(
+					__( 'Continue reading %s', 'booty' ),
+					the_title( '<span class="screen-reader-text">', '</span>', false )
+				) );
+			else :
+				/* translators: %s: Name of current post */
+				the_excerpt( sprintf(
+					__( 'Continue reading %s', 'booty' ),
+					the_title( '<span class="screen-reader-text">', '</span>', false )
+				) );
+			endif;
+
+
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'booty' ) . '</span>',
 				'after'       => '</div>',
@@ -49,9 +58,10 @@
 		if ( is_single() && get_the_author_meta( 'description' ) ) :
 			get_template_part( 'author-bio' );
 		endif;
+
 	?>
 
 	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'booty' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php booty_entry_meta();?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

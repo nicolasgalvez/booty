@@ -16,7 +16,7 @@
     <div class="input-group">
         <input type="text" class="form-control" id="s" name="s" placeholder="Search"<?php if ($search_terms !== '') {echo ' value="' . $search_terms . '"';}?> />
         <span class="input-group-btn">
-            <button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
+            <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
         </span>
     </div> <!-- .input-group -->
 </form>
