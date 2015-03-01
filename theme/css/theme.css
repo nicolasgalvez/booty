@@ -1607,7 +1607,7 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, #secondary, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .entry-footer div, .col-sm-4, .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail, .home-su .su-post, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, body:not(.single) .has-post-thumbnail .entry-content, body:not(.single) .has-post-thumbnail .post-thumbnail, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, body:not(.single) .has-post-thumbnail .entry-content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, #primary, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #secondary > ul > li, article .entry-header, article .entry-content, .entry-footer, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, #secondary, .col-lg-3, .col-xs-4, .entry-footer div, .col-sm-4, .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail, .home-su .su-post, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, body:not(.single) .has-post-thumbnail .entry-content, body:not(.single) .has-post-thumbnail .post-thumbnail, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, body:not(.single) .has-post-thumbnail .entry-content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, #primary, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #secondary > ul > li, article .entry-header, article .entry-content, .entry-footer, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -2032,7 +2032,7 @@ pre code {
   }
 }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, #secondary, .col-md-3, .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail, .home-su .su-post, .col-md-5, .col-md-6, .col-md-7, .col-md-8, body:not(.single) .has-post-thumbnail .entry-content, .col-md-9, .col-md-10, #primary, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, #secondary, .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail, .home-su .su-post, .col-md-5, .col-md-6, .col-md-7, .col-md-8, body:not(.single) .has-post-thumbnail .entry-content, .col-md-9, #primary, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -2040,11 +2040,11 @@ pre code {
     width: 8.33333%;
   }
 
-  .col-md-2, #secondary {
+  .col-md-2 {
     width: 16.66667%;
   }
 
-  .col-md-3 {
+  .col-md-3, #secondary {
     width: 25%;
   }
 
@@ -2068,11 +2068,11 @@ pre code {
     width: 66.66667%;
   }
 
-  .col-md-9 {
+  .col-md-9, #primary {
     width: 75%;
   }
 
-  .col-md-10, #primary {
+  .col-md-10 {
     width: 83.33333%;
   }
 
@@ -6824,7 +6824,7 @@ body {
   height: 60px;
 }
 
-body:not(".home") {
+body:not(.home) {
   background-image: url("../images/bg.jpg");
 }
 

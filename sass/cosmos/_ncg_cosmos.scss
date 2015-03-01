@@ -38,9 +38,10 @@ body {
 }
 
 // Wow! So space! Many Stars.
-body:not(".home") {
+body:not(.home) {
 	background-image: url('../images/bg.jpg');
 }
+// this is the fix for the admin bar which puts 32 pix on html. Removed in functions.php
 .admin-bar {
 	margin-top: 32px;
 }
@@ -64,9 +65,9 @@ body:not(".home") {
 #content {
 	@extend .container;
 }
-
+// main area
 #primary {
-	@extend .col-md-10;
+	@extend .col-md-9;
 	article {
 		margin-bottom: 20px;
 		@extend .row;
@@ -74,8 +75,9 @@ body:not(".home") {
 		//@include innerBorder();
 	}
 }
+// the sidebar
 #secondary {
-	@extend .col-md-2;
+	@extend .col-md-3;
 	&>ul {
 		margin-top: 0;
 		padding: 0 10px;
