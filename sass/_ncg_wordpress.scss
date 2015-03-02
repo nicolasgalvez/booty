@@ -19,3 +19,11 @@ article {
 		@extend .img-responsive;
 	}
 }
+
+// Responsive items. Ohhhh yeah.
+.embed-container {
+	@extend .embed-responsive, .embed-responsive-16by9;
+	iframe {
+		@extend .embed-responsive-item;
+	}
+}

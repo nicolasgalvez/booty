@@ -5784,18 +5784,22 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-bottom-color: #ebccd1;
 }
 
-.embed-responsive {
+.embed-responsive, .embed-container {
   position: relative;
   display: block;
   height: 0;
   padding: 0;
   overflow: hidden;
 }
-.embed-responsive .embed-responsive-item,
+.embed-responsive .embed-responsive-item, .embed-container .embed-responsive-item, .embed-container iframe,
 .embed-responsive iframe,
+.embed-container iframe,
 .embed-responsive embed,
+.embed-container embed,
 .embed-responsive object,
-.embed-responsive video {
+.embed-container object,
+.embed-responsive video,
+.embed-container video {
   position: absolute;
   top: 0;
   left: 0;
@@ -5804,10 +5808,10 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   width: 100%;
   border: 0;
 }
-.embed-responsive.embed-responsive-16by9 {
+.embed-responsive.embed-responsive-16by9, .embed-container {
   padding-bottom: 56.25%;
 }
-.embed-responsive.embed-responsive-4by3 {
+.embed-responsive.embed-responsive-4by3, .embed-responsive-4by3.embed-container {
   padding-bottom: 75%;
 }
 
@@ -6822,7 +6826,7 @@ a {
 }
 
 a:hover {
-  transition: all 500ms;
+  transition: all 750ms;
 }
 
 #colophon {

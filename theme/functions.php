@@ -94,21 +94,10 @@
 			'description' => __('Below menu on the front page, this is for full-width widgets like a slider.', 'booty')
 		));	
 		register_sidebar(array(
-			'id' => 'home-featured-widgets',
+			'id' => 'home-widgets',
 			'name' => __('Home featured', 'booty'),
 			'description' => __('This is the area right under the video on the home page.', 'booty')
 		));
-		register_sidebar(array(
-			'id' => 'home-testimonial-widgets',
-			'name' => __('Home testimonial', 'booty'),
-			'description' => __('This is the area right under the main menu on the home page.', 'booty')
-		));
-		register_sidebar(array(
-			'id' => 'home-instruments-widgets',
-			'name' => __('Home instruments', 'booty'),
-			'description' => __('This is the area right under the main menu on the home page.', 'booty')
-		));
-
 		register_sidebar(array(
 			'id' => 'footer-sidebar',
 			'name' => __('Footer widgets', 'booty'),
@@ -122,9 +111,6 @@
 	}
 	add_action('widgets_init', 'register_sidebars');
 
-	/******************************************************************************\
-	 Scripts and Styles
-	 \******************************************************************************/
 
 	/**
 	 * Enqueue booty scripts
@@ -132,7 +118,6 @@
 	 */
 	function booty_enqueue_scripts() {
 		wp_enqueue_style('booty-styles', get_template_directory_uri() . '/css/theme.css', array(), '1.0');
-		// new jquery
 		wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.0', true);
 		wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '1.0', true);
 		wp_enqueue_script('booty-scripts', get_template_directory_uri() . '/js/scripts.min.js', array(), '1.0', true);
