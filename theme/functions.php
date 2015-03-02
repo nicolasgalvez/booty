@@ -28,7 +28,7 @@
 	require_once "lib/wp-bootstrap-navwalker/wp_bootstrap_navwalker.php";
 
 	add_theme_support('post-thumbnails');
-	set_post_thumbnail_size( 300, 200, array( 'center', 'center')  ); // 300 pixels wide by 200 pixels tall, crop from the center
+	set_post_thumbnail_size( 600, 400, array( 'center', 'center')  ); // 300 pixels wide by 200 pixels tall, crop from the center
 	add_theme_support('automatic-feed-links');
 
 	// This is the custom header. By default it will use the image found in /images/logo.png, if any.
@@ -380,11 +380,8 @@
 		}
 		if ( is_singular() ) :
 			return; // lets just do this for now.
-		?>
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
-			<?php else : ?>
+			?>
+			<?php else :?>
 			<div class="post-thumbnail">
 				<a href="<?php the_permalink(); ?>" aria-hidden="true">
 					<?php

@@ -3,9 +3,10 @@
  */
 
 .glow {
-	border-color: rgba(215, 237, 255, 0.20);
-	box-shadow: 0 0 20px rgba(207, 247, 188, 0.57), 0 0 200px rgba(0, 0, 0, 0.67) inset;
+	box-shadow: 0 0 20px rgba(207, 247, 188, 0.27), 0 0 200px rgba(0, 0, 0, 0.67) inset;
 	background: rgba(7, 44, 11, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 2px;
 }
 .background {
 	background: rgba(7, 44, 11, 0.5);
@@ -29,6 +30,14 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+a {
+	transition: all 500ms;
+}
+a:hover {
+	transition: all 500ms;
+}
+
 #colophon {
   position: absolute;
   bottom: 0;
@@ -50,7 +59,12 @@ body:not(.home) {
 	background: rgba(0, 0, 0, 0.60);
 	border-bottom: 1px solid rgba(239, 239, 239, 0.51);
 	margin-bottom: 20px;
-	box-shadow: 0 0 12px $brand-primary, -3px -3px 26px rgba(255, 0, 0, 0.26) inset;
+	box-shadow: 0 0 12px rgba(0, 255, 0, 0.41), -3px -3px 26px rgba(136, 137, 0, 0.26) inset;
+}
+
+.nav > li > a:hover, .nav > li > a:focus, #site-title a:hover {
+	text-shadow: 0 0 7px #fff, -2px -2px 10px #00ADFF, 2px 2px 10px #D3FF00;
+	color: #fff;
 }
 
 .navbar-toggle {
@@ -59,9 +73,24 @@ body:not(.home) {
 		background-color: $brand-primary;
 	}
 }
+
+.brand p {
+	float: left;
+}
+#site-title {
+	margin: 7px 10px 0 0;
+	font-size: 20px;
+}
+
 #description {
+	margin: 17px 0 0 0;
 	font-size: 10px;
 }
+
+/**
+ * The Content area
+ */
+
 #content {
 	@extend .container;
 }
@@ -110,7 +139,7 @@ article {
 }
 
 // Archive title rules
-header.entry-header h2, header.entry-header h1 {
+header.entry-header h2, header.entry-header h1, .widgettitle {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.50);
 	padding: 5px 0;
 	font-family: "michromaregular";
@@ -130,11 +159,17 @@ header.entry-header h2, header.entry-header h1 {
 // Archive
 
 body:not(.single) .has-post-thumbnail {
+	.post-thumbnail:not(.full-width) {
+		@extend .col-sm-6, .col-md-4;
+	}
 	.entry-content {
 		@extend .col-sm-6, .col-md-8;
 	}
-	.post-thumbnail {
-		@extend .col-sm-6, .col-md-4;
+	.post-thumbnail.full-width {
+		@extend .col-xs-12;
+		img {
+			width: 100%;
+		}
 	}
 }
 
@@ -186,7 +221,6 @@ body:not(.single) .has-post-thumbnail {
 			font-size: 11px;
 			/* border-left: 1px solid rgba(255, 255, 255, 0.22); */
 			line-height: 11px;
-			font-family: $font-family-monospace;
 		}
 	}
  }

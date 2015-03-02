@@ -38,11 +38,15 @@
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <div class = "navbar-brand">
-		                <a id="site-title" class="" href="<?php echo site_url()?>">
-							<?php echo bloginfo('site_title')?>
-	                	</a>
-	                	<span id="description"><?php echo bloginfo('description')?></span>	                
+	                <div class = "brand">
+	             		<p id="site-title">
+			                <a href="<?php echo site_url()?>">
+								<?php echo bloginfo('site_title')?>
+		                	</a>
+	                	</p>
+	                	<p id="description">
+	                		<?php echo bloginfo('description')?>	     
+	                	</p>           
 	                </div>
 
 	            </div>

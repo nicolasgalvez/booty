@@ -23,34 +23,34 @@
 	</header><!-- .entry-header -->
 	<?php
 	// Post thumbnail.
+	// var_dump ($post);
 		booty_post_thumbnail();
 	?>
-	<div class="entry-content">
-		<?php
-			if ( is_single() || is_page() ) :
-				/* translators: %s: Name of current post */
-				the_content( sprintf(
-					__( 'Continue reading %s', 'booty' ),
-					the_title( '<span class="screen-reader-text">', '</span>', false )
-				) );
-			else :
-				/* translators: %s: Name of current post */
+	<?php if ( is_single() || is_page() ) : ?>
+		<div class="entry-content">
+		<?php	/* translators: %s: Name of current post */
+			the_content( sprintf(
+				__( 'Continue reading %s', 'booty' ),
+				the_title( '<span class="screen-reader-text">', '</span>', false )
+			) ); ?>
+		<?php else : ?>
+			<div class="entry-content excerpt">
+			<?php	/* translators: %s: Name of current post */
 				the_excerpt( sprintf(
 					__( 'Continue reading %s', 'booty' ),
 					the_title( '<span class="screen-reader-text">', '</span>', false )
-				) );
-			endif;
-
-
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'booty' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'booty' ) . ' </span>%',
-				'separator'   => '<span class="screen-reader-text">, </span>',
-			) );
-		?>
+				) ); 
+			?>
+		<?php endif; ?>
+		<?php wp_link_pages( array(
+			'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'booty' ) . '</span>',
+			'after'       => '</div>',
+			'link_before' => '<span>',
+			'link_after'  => '</span>',
+			'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'booty' ) . ' </span>%',
+			'separator'   => '<span class="screen-reader-text">, </span>',
+		) );
+	?>
 	</div><!-- .entry-content -->
 
 	<?php
