@@ -82,7 +82,11 @@
 	 * Register widget areas.
 	 */
 	if (function_exists('register_sidebars')) {
-
+		register_sidebar(array(
+			'id' => 'sidebar',
+			'name' => __('Sidebar Widgets', 'booty'),
+			'description' => __('Shows on the regular pages', 'booty')
+		));
 		register_sidebar(array(
 			'id' => 'header-widgets',
 			'name' => __('Header widgets', 'booty'),
@@ -98,16 +102,7 @@
 			'name' => __('Home featured', 'booty'),
 			'description' => __('This is the area right under the video on the home page.', 'booty')
 		));
-		register_sidebar(array(
-			'id' => 'footer-sidebar',
-			'name' => __('Footer widgets', 'booty'),
-			'description' => __('Shows in the sites footer', 'booty')
-		));
-		register_sidebar(array(
-			'id' => 'sidebar',
-			'name' => __('Sidebar Widgets', 'booty'),
-			'description' => __('Shows on the regular pages', 'booty')
-		));
+
 	}
 	add_action('widgets_init', 'register_sidebars');
 
