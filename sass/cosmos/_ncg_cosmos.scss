@@ -49,6 +49,14 @@ a:hover {
 // Wow! So space! Many Stars.
 body:not(.home) {
 	background-image: url('../images/bg.jpg');
+	#primary{
+		@extend .col-md-9;
+	}
+}
+body.home {
+	#primary {
+		@extend .col-md-12;
+	}
 }
 // this is the fix for the admin bar which puts 32 pix on html. Removed in functions.php
 .admin-bar {
@@ -96,7 +104,6 @@ body:not(.home) {
 }
 // main area
 #primary {
-	@extend .col-md-9;
 	article {
 		margin-bottom: 20px;
 		@extend .row;

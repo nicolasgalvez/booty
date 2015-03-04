@@ -1607,7 +1607,7 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, #secondary, .col-lg-3, .col-xs-4, .entry-footer div, .col-sm-4, .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), .home-su .su-post, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), body:not(.single) .has-post-thumbnail .entry-content, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, body:not(.single) .has-post-thumbnail .entry-content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, #primary, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #secondary > ul > li, article .entry-header, article .entry-content, body:not(.single) .has-post-thumbnail .post-thumbnail.full-width, .entry-footer, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, #secondary, .col-lg-3, .col-xs-4, .entry-footer div, .col-sm-4, .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), .home-su .su-post, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), body:not(.single) .has-post-thumbnail .entry-content, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, body:not(.single) .has-post-thumbnail .entry-content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, body:not(.home) #primary, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #secondary > ul > li, article .entry-header, article .entry-content, body:not(.single) .has-post-thumbnail .post-thumbnail.full-width, .entry-footer, .col-sm-12, .col-md-12, body.home #primary, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -2032,7 +2032,7 @@ pre code {
   }
 }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, #secondary, .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), .home-su .su-post, .col-md-5, .col-md-6, .col-md-7, .col-md-8, body:not(.single) .has-post-thumbnail .entry-content, .col-md-9, #primary, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, #secondary, .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), .home-su .su-post, .col-md-5, .col-md-6, .col-md-7, .col-md-8, body:not(.single) .has-post-thumbnail .entry-content, .col-md-9, body:not(.home) #primary, .col-md-10, .col-md-11, .col-md-12, body.home #primary {
     float: left;
   }
 
@@ -2068,7 +2068,7 @@ pre code {
     width: 66.66667%;
   }
 
-  .col-md-9, #primary {
+  .col-md-9, body:not(.home) #primary {
     width: 75%;
   }
 
@@ -2080,7 +2080,7 @@ pre code {
     width: 91.66667%;
   }
 
-  .col-md-12 {
+  .col-md-12, body.home #primary {
     width: 100%;
   }
 
@@ -6964,3 +6964,39 @@ body:not(.single) .has-post-thumbnail .post-thumbnail.full-width img {
 /**
  * Sometimes the home page
  */
+#copyright {
+  text-align: center;
+  opacity: .8;
+}
+#copyright p {
+  margin: 0;
+}
+
+p#nick-9000 {
+  font-family: "fujiyama2regular", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: 1px solid #24b8d6;
+  text-shadow: -1px -1px 0 #efefef, 1px -1px 0 #efefef, -1px 1px 0 #efefef, 1px 1px 0 #efefef;
+  margin: auto;
+}
+
+#nick-9000 span {
+  width: 50%;
+  display: block;
+  float: left;
+  padding: 3px 5px;
+}
+
+#nick-9000 span:first-child {
+  text-align: right;
+  background: #24b8d6;
+  color: #24b8d6;
+}
+
+#nick-9000 span:last-child {
+  text-align: left;
+  background: #070908;
+  color: #070908;
+}
