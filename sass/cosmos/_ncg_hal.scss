@@ -1,0 +1,34 @@
+#copyright {
+  text-align: center;
+  opacity: .8;
+  p {
+    margin: 0;
+  }
+}
+
+p#nick-9000 {
+  font-family: $font-family-sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: 1px solid #24b8d6;
+  text-shadow: -1px -1px 0 #efefef, 1px -1px 0 #efefef, -1px 1px 0 #efefef, 1px 1px 0 #efefef;
+  margin: auto;
+}
+
+#nick-9000 span {
+  width: 50%;
+  display: block;
+  float: left;
+  padding: 3px 5px;
+}
+#nick-9000 span:first-child {
+  text-align: right;
+  background: #24b8d6;
+  color: #24b8d6;
+}
+#nick-9000 span:last-child {
+  text-align: left;
+  background: #070908;
+  color: #070908;
+}
