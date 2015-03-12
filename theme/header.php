@@ -29,6 +29,13 @@
 		<div class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
 			<header class="site-header" role="banner">
+			<?php if ( is_active_sidebar( 'header-widgets' ) ) : ?>
+				<section  id = "header-widgets">
+					<ul>
+					<?php dynamic_sidebar( 'header-widgets' ); ?>
+					</ul>
+				</section>
+			<?php endif; ?>			
 				<nav>
 				<div class="navbar-header">
 	                <button type="button" class="navbar-toggle" data-toggle="collapse"

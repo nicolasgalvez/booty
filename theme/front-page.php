@@ -10,6 +10,15 @@
 get_header(); ?>
 
 	<div id="content" class="content-area">
+
+	<?php if ( is_active_sidebar( 'hero-widgets' ) ) : ?>
+		<section  id = "hero-widgets">
+			<ul>
+			<?php dynamic_sidebar( 'hero-widgets' ); ?>
+			</ul>
+		</section>
+	<?php endif; ?>
+
 		<main id="main" class="site-main" role="main">
 		<!-- Begin the Primary section -->
 		<section id = "primary">
@@ -46,6 +55,13 @@ get_header(); ?>
 			endif;
 			?>
 		</section>
+		<?php if ( is_active_sidebar( 'home-widgets' ) ) : ?>
+			<section  id = "home-widgets">
+				<ul>
+				<?php dynamic_sidebar( 'home-widgets' ); ?>
+				</ul>
+			</section>
+		<?php endif; ?>
 		<!-- End the Primary section -->
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
