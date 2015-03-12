@@ -20,22 +20,17 @@
 	@extend .glow;
 	}
 
-/* Sticky footer styles
--------------------------------------------------- */
+/**
+ * Sticky footer from getbootstrap.com
+ */
 html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-}
-
-a {
-	transition: all 500ms;
-}
-a:hover {
-	transition: all 750ms;
 }
 
 #colophon {
@@ -46,23 +41,32 @@ a:hover {
   height: 60px;
 }
 
-// Wow! So space! Many Stars.
-body:not(.home) {
-	background-image: url('../images/bg.jpg');
-	#primary{
-		@extend .col-md-9;
-	}
-}
-body.home {
-	#primary {
-		@extend .col-md-12;
-	}
-}
 // this is the fix for the admin bar which puts 32 pix on html. Removed in functions.php
 .admin-bar {
 	margin-top: 32px;
 }
+// end sticky bottom
 
+/**
+ * Theme basics
+ */
+
+// Wow! So space! Many Stars.
+body:not(.home) {
+	background-image: url('../images/bg.jpg');
+}
+
+
+a {
+	transition: all 500ms;
+}
+a:hover {
+	transition: all 750ms;
+}
+
+/**
+ * The header
+ */
 .site-header nav {
 	background: rgba(0, 0, 0, 0.60);
 	border-bottom: 1px solid rgba(239, 239, 239, 0.51);
@@ -85,6 +89,7 @@ body.home {
 .brand p {
 	float: left;
 }
+
 #site-title {
 	margin: 7px 10px 0 0;
 	font-size: 20px;
@@ -99,53 +104,71 @@ body.home {
  * The Content area
  */
 
+
 #content {
 	@extend .container;
 }
-// main area
+
+// set the home page to full width, no sidebar
+body.home {
+	#primary {
+		@extend .col-md-12;
+	}
+}
+// allow sidebar on all other pages
+body:not(.home) {
+	#primary{
+		@extend .col-md-9;
+	}
+}
+
+
+
+/**
+ * Post/page rules
+ */
+
+/**
+ * Article styles:
+ */
 #primary {
 	article {
 		margin-bottom: 20px;
 		@extend .row;
 		@extend .glow;
-		//@include innerBorder();
-	}
-}
-// the sidebar
-#secondary {
-	@extend .col-md-3;
-	&>ul {
-		margin-top: 0;
-		padding: 0 10px;
-		@extend .row;
-		&>li {
-			list-style: none;
-			margin-bottom: 20px;
-			padding: 10px 6px;
+		.entry-header {
 			@extend .col-xs-12;
-			border-left: 1px solid 1px solid rgba(255, 255, 255, 0.48);
-			@extend .glow;
 		}
+		// Make post-content full width if no thumb.
+		.entry-content {
+			@extend .col-xs-12;
+		}
+		// footer and meta
+		.entry-footer {
+			margin-top: 10px;
+			margin-bottom: 20px;
+			font-size: 11px;
+			font-family: $font-family-monospace;
+			@extend .col-xs-12;
+			div {
+				border-left: 1px solid rgba(239, 239, 239, 0.32);
+				@extend .col-xs-4;
+			}
+			p, ul {
+				margin: 0;
+			}
+			ul {
+				padding: 0;
+				li {
+					list-style: none;
+				}
+			}
+		}
+
 	}
 }
 
-/**
- * Post rules
- */
-
-article {
-	.entry-header {
-		@extend .col-xs-12;
-	}
-	// Make post-content full width if no thumb.
-	.entry-content {
-		@extend .col-xs-12;
-	}
-
-
-}
-
-// Archive title rules
+// Glowing title rules
 header.entry-header h2, header.entry-header h1, .widgettitle {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.50);
 	padding: 5px 0;
@@ -180,33 +203,28 @@ body:not(.single) .has-post-thumbnail {
 	}
 }
 
-// footer and meta
-.entry-footer {
-	margin-top: 10px;
-	margin-bottom: 20px;
-	font-size: 11px;
-	font-family: $font-family-monospace;
-	@extend .col-xs-12;
-	div {
-		border-left: 1px solid rgba(239, 239, 239, 0.32);
-		@extend .col-xs-4;
-	}
-	p, ul {
-		margin: 0;
-	}
-	ul {
-		padding: 0;
-		li {
-			list-style: none;
-		}
-	}
-}
+
 
 /**
  * Sidebar
  */
 
+
 #secondary {
+	@extend .col-md-3;
+	&>ul {
+		margin-top: 0;
+		padding: 0 10px;
+		@extend .row;
+		&>li {
+			list-style: none;
+			margin-bottom: 20px;
+			padding: 10px 6px;
+			@extend .col-xs-12;
+			border-left: 1px solid 1px solid rgba(255, 255, 255, 0.48);
+			@extend .glow;
+		}
+	}
 }
 
  .widget {
@@ -233,7 +251,7 @@ body:not(.single) .has-post-thumbnail {
  }
 
  /**
-  * Sometimes the home page
+  * Super Unicode, wait, Shorcode Ultimate styles on home.
   */
  .home-su {
  	 .su-posts {

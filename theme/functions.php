@@ -7,23 +7,24 @@
 	 * @since booty 1.0
 	 */
 
-	define('FS_METHOD','direct');
+	define('FS_METHOD','direct'); // Hack to get plugins to install.
 
+	/**
+	 * This adds the custum post types to the blog feed.
+	 */
 	add_filter( 'pre_get_posts', 'my_get_posts' );
 
 	function my_get_posts( $query ) {
 
 		if ( is_home() && $query->is_main_query() )
-			$query->set( 'post_type', array( 'post', 'track', 'project' ) );
-
+			$query->set( 'post_type', array( 'post', 'track', 'project' ) ); // The custom post types you want to see in the feed.
 		return $query;
 	}
 
 	/**
-	 * Include library files like walkers, etc.
-	 * @todo gitify and move to vendors. Manage with composer.
+	 * Include library files like walkers, etc. 
 	 */
-	// require_once "lib/templ.class.php";
+
 	// require_once "lib/ncg_walker_comment.php";
 	require_once "lib/wp-bootstrap-navwalker/wp_bootstrap_navwalker.php";
 
@@ -44,6 +45,15 @@
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 	) );
+
+	/**
+	 * Support for Jetpack Infinite Scroll
+	 */
+	add_theme_support( 'infinite-scroll', array(
+	    'container' => 'content',
+	    'footer' => 'page',
+	) );
+
 
 	/**
 	 * Support shortcode in custom excerpt (I had to do this for a client.)
