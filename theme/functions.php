@@ -31,6 +31,7 @@
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size( 600, 400, array( 'center', 'center')  ); // 300 pixels wide by 200 pixels tall, crop from the center
 	add_theme_support('automatic-feed-links');
+	add_theme_support( 'post-formats', array( 'image', 'gallery' ) );
 
 	// This is the custom header. By default it will use the image found in /images/logo.png, if any.
 	$custom_header_args = array(

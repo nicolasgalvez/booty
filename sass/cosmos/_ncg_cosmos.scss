@@ -188,7 +188,7 @@ header.entry-header h2, header.entry-header h1, .widgettitle {
 // Featured image rules
 // Archive
 
-body:not(.single) .has-post-thumbnail {
+body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) {
 	.post-thumbnail:not(.full-width) {
 		@extend .col-sm-6, .col-md-4;
 	}
@@ -202,8 +202,16 @@ body:not(.single) .has-post-thumbnail {
 		}
 	}
 }
-
-
+// full width images for the "image" post format.
+// What's up with that horrible class name? c'mon wordpress.
+.post_format-post-format-image {
+	.post-thumbnail {
+		@extend .col-xs-12;
+	}
+	img {
+		width: 100%;
+	}
+}
 
 /**
  * Sidebar

@@ -1607,14 +1607,14 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, #secondary, .col-lg-3, .col-xs-4, .entry-footer div, .col-sm-4, .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), .home-su .su-post, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), body:not(.single) .has-post-thumbnail .entry-content, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, body:not(.single) .has-post-thumbnail .entry-content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, body:not(.home) #primary, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #secondary > ul > li, article .entry-header, article .entry-content, body:not(.single) .has-post-thumbnail .post-thumbnail.full-width, .entry-footer, .col-sm-12, .col-md-12, body.home #primary, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, #secondary, .col-lg-3, .col-xs-4, #primary article .entry-footer div, .col-sm-4, .col-md-4, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail:not(.full-width), .home-su .su-post, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail:not(.full-width), body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .entry-content, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .entry-content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, body:not(.home) #primary, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, #primary article .entry-header, #primary article .entry-content, #primary article .entry-footer, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail.full-width, .post_format-post-format-image .post-thumbnail, #secondary > ul > li, .col-sm-12, .col-md-12, body.home #primary, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .entry-footer div, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, #secondary > ul > li, article .entry-header, article .entry-content, body:not(.single) .has-post-thumbnail .post-thumbnail.full-width, .entry-footer {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, #primary article .entry-footer div, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, #primary article .entry-header, #primary article .entry-content, #primary article .entry-footer, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail.full-width, .post_format-post-format-image .post-thumbnail, #secondary > ul > li {
   float: left;
 }
 
@@ -1630,7 +1630,7 @@ pre code {
   width: 25%;
 }
 
-.col-xs-4, .entry-footer div {
+.col-xs-4, #primary article .entry-footer div {
   width: 33.33333%;
 }
 
@@ -1662,7 +1662,7 @@ pre code {
   width: 91.66667%;
 }
 
-.col-xs-12, #secondary > ul > li, article .entry-header, article .entry-content, body:not(.single) .has-post-thumbnail .post-thumbnail.full-width, .entry-footer {
+.col-xs-12, #primary article .entry-header, #primary article .entry-content, #primary article .entry-footer, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail.full-width, .post_format-post-format-image .post-thumbnail, #secondary > ul > li {
   width: 100%;
 }
 
@@ -1823,7 +1823,7 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), body:not(.single) .has-post-thumbnail .entry-content, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail:not(.full-width), body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .entry-content, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }
 
@@ -1847,7 +1847,7 @@ pre code {
     width: 41.66667%;
   }
 
-  .col-sm-6, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), body:not(.single) .has-post-thumbnail .entry-content {
+  .col-sm-6, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail:not(.full-width), body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .entry-content {
     width: 50%;
   }
 
@@ -2032,7 +2032,7 @@ pre code {
   }
 }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, #secondary, .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), .home-su .su-post, .col-md-5, .col-md-6, .col-md-7, .col-md-8, body:not(.single) .has-post-thumbnail .entry-content, .col-md-9, body:not(.home) #primary, .col-md-10, .col-md-11, .col-md-12, body.home #primary {
+  .col-md-1, .col-md-2, .col-md-3, #secondary, .col-md-4, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail:not(.full-width), .home-su .su-post, .col-md-5, .col-md-6, .col-md-7, .col-md-8, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .entry-content, .col-md-9, body:not(.home) #primary, .col-md-10, .col-md-11, .col-md-12, body.home #primary {
     float: left;
   }
 
@@ -2048,7 +2048,7 @@ pre code {
     width: 25%;
   }
 
-  .col-md-4, body:not(.single) .has-post-thumbnail .post-thumbnail:not(.full-width), .home-su .su-post {
+  .col-md-4, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail:not(.full-width), .home-su .su-post {
     width: 33.33333%;
   }
 
@@ -2064,7 +2064,7 @@ pre code {
     width: 58.33333%;
   }
 
-  .col-md-8, body:not(.single) .has-post-thumbnail .entry-content {
+  .col-md-8, body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .entry-content {
     width: 66.66667%;
   }
 
@@ -6809,8 +6809,9 @@ article figure {
   box-shadow: 0 0 200px rgba(0, 0, 0, 0.67) inset;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+/**
+ * Sticky footer from getbootstrap.com
+ */
 html {
   position: relative;
   min-height: 100%;
@@ -6821,14 +6822,6 @@ body {
   margin-bottom: 60px;
 }
 
-a {
-  transition: all 500ms;
-}
-
-a:hover {
-  transition: all 750ms;
-}
-
 #colophon {
   position: absolute;
   bottom: 0;
@@ -6837,14 +6830,28 @@ a:hover {
   height: 60px;
 }
 
-body:not(.home) {
-  background-image: url("../images/bg.jpg");
-}
-
 .admin-bar {
   margin-top: 32px;
 }
 
+/**
+ * Theme basics
+ */
+body:not(.home) {
+  background-image: url("../images/bg.jpg");
+}
+
+a {
+  transition: all 500ms;
+}
+
+a:hover {
+  transition: all 750ms;
+}
+
+/**
+ * The header
+ */
 .site-header nav {
   background: rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid rgba(239, 239, 239, 0.51);
@@ -6881,24 +6888,34 @@ body:not(.home) {
 /**
  * The Content area
  */
+/**
+ * Post/page rules
+ */
+/**
+ * Article styles:
+ */
 #primary article {
   margin-bottom: 20px;
 }
-
-#secondary > ul {
-  margin-top: 0;
-  padding: 0 10px;
-}
-#secondary > ul > li {
-  list-style: none;
+#primary article .entry-footer {
+  margin-top: 10px;
   margin-bottom: 20px;
-  padding: 10px 6px;
-  border-left: 1px solid 1px solid rgba(255, 255, 255, 0.48);
+  font-size: 11px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+#primary article .entry-footer div {
+  border-left: 1px solid rgba(239, 239, 239, 0.32);
+}
+#primary article .entry-footer p, #primary article .entry-footer ul {
+  margin: 0;
+}
+#primary article .entry-footer ul {
+  padding: 0;
+}
+#primary article .entry-footer ul li {
+  list-style: none;
 }
 
-/**
- * Post rules
- */
 header.entry-header h2, header.entry-header h1, .widgettitle {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 5px 0;
@@ -6914,32 +6931,28 @@ header.entry-header h2 a, header.entry-header h1 a, .widgettitle a {
   border-bottom: 1px solid rgba(255, 0, 0, 0.5);
 }
 
-body:not(.single) .has-post-thumbnail .post-thumbnail.full-width img {
+body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail.full-width img {
   width: 100%;
 }
 
-.entry-footer {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: 11px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-.entry-footer div {
-  border-left: 1px solid rgba(239, 239, 239, 0.32);
-}
-.entry-footer p, .entry-footer ul {
-  margin: 0;
-}
-.entry-footer ul {
-  padding: 0;
-}
-.entry-footer ul li {
-  list-style: none;
+.post_format-post-format-image img {
+  width: 100%;
 }
 
 /**
  * Sidebar
  */
+#secondary > ul {
+  margin-top: 0;
+  padding: 0 10px;
+}
+#secondary > ul > li {
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 10px 6px;
+  border-left: 1px solid 1px solid rgba(255, 255, 255, 0.48);
+}
+
 .widget .widgettitle {
   font-size: 15px;
   font-size: 20px;
@@ -6962,7 +6975,7 @@ body:not(.single) .has-post-thumbnail .post-thumbnail.full-width img {
 }
 
 /**
- * Sometimes the home page
+ * Super Unicode, wait, Shorcode Ultimate styles on home.
  */
 #copyright {
   text-align: center;
