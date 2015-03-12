@@ -6841,6 +6841,11 @@ body:not(.home) {
   background-image: url("../images/bg.jpg");
 }
 
+@media screen and (max-width: 480px) {
+  body.home {
+    background-image: url("../images/bg.jpg");
+  }
+}
 a {
   transition: all 500ms;
 }
