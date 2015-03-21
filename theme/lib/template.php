@@ -57,7 +57,7 @@
 			return false;
 	}
 	/**
-	 * Specifies copyright template
+	 * Echos copyright template
 	 * @param  string $name default = "default"
 	 * @return void
 	 */
