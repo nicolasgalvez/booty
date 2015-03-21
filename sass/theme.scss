@@ -1,8 +1,10 @@
 // Core variables and mixins
-//@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+
+
 //the fonts
-@import "../fonts/cosmos/stylesheet.css";
-@import "cosmos/_ncg_cosmos_variables";
+// @import "../fonts/cosmos/stylesheet.css";
+
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
 
 // Reset and dependencies
@@ -12,7 +14,7 @@
 
 // Core CSS
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
-//@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/type";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/type";
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/code";
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
@@ -55,6 +57,7 @@
 /**
  * Custom theme styles should be imported here.
  */
-@import "_ncg_wordpress.scss";
-@import "cosmos/_ncg_cosmos.scss";
-@import "cosmos/_ncg_hal.scss";
+@import "wordpress/_layout.scss";
+@import "wordpress/_ncg_wordpress.scss";
+// @import "cosmos/_ncg_hal.scss";
+// @import "cosmos/_ncg_cosmos.scss";

@@ -1,9 +1,7 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
-
 		pkg : grunt.file.readJSON('package.json'),
-
 		// chech our JS
 		jshint : {
 			options : {
@@ -29,7 +27,6 @@ module.exports = function(grunt) {
 			},
 			all : ['gruntfile.js', 'theme/js/scripts.js']
 		},
-
 		// concat and minify our JS
 		uglify : {
 			dist : {

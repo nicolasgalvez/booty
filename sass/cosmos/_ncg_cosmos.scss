@@ -20,32 +20,7 @@
 	@extend .glow;
 	}
 
-/**
- * Sticky footer from getbootstrap.com
- */
-html {
-  position: relative;
-  min-height: 100%;
-}
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-
-#colophon {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-}
-
-// this is the fix for the admin bar which puts 32 pix on html. Removed in functions.php
-.admin-bar {
-	margin-top: 32px;
-}
-// end sticky bottom
 
 /**
  * Theme basics
