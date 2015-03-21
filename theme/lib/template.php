@@ -64,4 +64,7 @@
 	function booty_copyright($name = 'default') {
 		get_template_part('partials/copyright', $name );
 	}
+	function booty_entry_meta($name = 'default') {
+		get_template_part('partials/meta', $name );
+	}
 

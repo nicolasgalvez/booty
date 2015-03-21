@@ -18,8 +18,6 @@
 	require_once "lib/bootstrap.php";
 	require_once "lib/scripts.php";
 	require_once "lib/template.php";
-	require_once "lib/cosmos-meta.php";
-
 
 	/**
 	 * Theme support
@@ -141,6 +139,15 @@
  */
 	function booty_filter_head() {
 		remove_action('wp_head', '_admin_bar_bump_cb');
+		// Move the margin to a better element:
+		 ?>
+		<style type="text/css" media="screen">
+			.admin-bar { margin-top: 32px !important; }
+			@media screen and ( max-width: 782px ) {
+				.admin-bar { margin-top: 46px !important; }
+			}
+		</style>
+		<?php
 	}
 	add_action('get_header', 'booty_filter_head');
 

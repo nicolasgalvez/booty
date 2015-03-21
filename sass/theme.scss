@@ -1,14 +1,11 @@
 /**
  * Import your theme:
  */
-@import "cosmos/ncg_cosmos.scss";
-
-// Comment out what you don't need in here (like the bootstrap variable file, or the type.)
-@import "bootstrap.scss";
+//@import "cosmos/ncg_cosmos.scss"; // super space theme.
+@import "default/default"; // super default theme
 
 /**
  * Default WordPress stuff.
  */
-//@import "wordpress/_layout.scss"; // the most common layout.
+@import "wordpress/_layout.scss"; // the most common layout.
 @import "wordpress/_ncg_wordpress.scss";
-
