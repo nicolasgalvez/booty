@@ -89,13 +89,30 @@
 		register_sidebar(array(
 			'id' => 'hero-widgets',
 			'name' => __('Hero Widgets', 'booty'),
-			'description' => __('Below menu on the front page, this is for full-width widgets like a slider.', 'booty')
+			'description' => __('Overlay for that video', 'booty')
 		));	
 		register_sidebar(array(
 			'id' => 'home-widgets',
 			'name' => __('Home featured', 'booty'),
 			'description' => __('This is the area right under the video on the home page.', 'booty')
 		));
+		register_sidebar(array(
+			'id' => 'home-widgets-1',
+			'name' => __('Home featured 1', 'booty'),
+			'description' => __('Transparent under the vid', 'booty')
+		));
+
+		register_sidebar(array(
+			'id' => 'home-widgets-2',
+			'name' => __('Home featured 2', 'booty'),
+			'description' => __('Another solid section on the home page', 'booty')
+		));
+		register_sidebar(array(
+			'id' => 'home-widgets-3',
+			'name' => __('Home featured 3', 'booty'),
+			'description' => __('This is the last area on the home page. Contact form anyone?', 'booty')
+		));
+
 
 	}
 	add_action('widgets_init', 'register_sidebars');
