@@ -7,6 +7,13 @@
 	@extend .row;
 }
 
+#primary {
+  @extend .col-md-9;
+}
+#secondary {
+  @extend .col-md-3;
+}
+
 /**
  * Sticky footer from getbootstrap.com
  */
@@ -29,3 +36,4 @@ body {
 }
 
 // end sticky bottom
+

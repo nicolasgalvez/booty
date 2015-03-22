@@ -7,6 +7,10 @@
 	display: none;
 }
 
+.site-header nav {
+	@extend .navbar, .navbar-default;
+}
+
 /**
  * Image styles
  */
