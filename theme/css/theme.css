@@ -1925,31 +1925,31 @@ pre code {
   overflow-y: scroll;
 }
 
-.container, #hero-widgets, .content-area > section ul {
+.container, #hero-widgets, .content-area > section ul, #footer-widgets {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-.container:before, #hero-widgets:before, .content-area > section ul:before, .container:after, #hero-widgets:after, .content-area > section ul:after {
+.container:before, #hero-widgets:before, .content-area > section ul:before, #footer-widgets:before, .container:after, #hero-widgets:after, .content-area > section ul:after, #footer-widgets:after {
   content: " ";
   display: table;
 }
-.container:after, #hero-widgets:after, .content-area > section ul:after {
+.container:after, #hero-widgets:after, .content-area > section ul:after, #footer-widgets:after {
   clear: both;
 }
 @media (min-width: 768px) {
-  .container, #hero-widgets, .content-area > section ul {
+  .container, #hero-widgets, .content-area > section ul, #footer-widgets {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container, #hero-widgets, .content-area > section ul {
+  .container, #hero-widgets, .content-area > section ul, #footer-widgets {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container, #hero-widgets, .content-area > section ul {
+  .container, #hero-widgets, .content-area > section ul, #footer-widgets {
     width: 1170px;
   }
 }
@@ -1980,7 +1980,7 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, #secondary, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, #hero-widgets ul li, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, #primary, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, #secondary, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, #footer-widgets > ul .widget, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, #hero-widgets ul li, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, #primary, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -2405,7 +2405,7 @@ pre code {
   }
 }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, #secondary, .col-md-4, .col-md-5, .col-md-6, #hero-widgets ul li, .col-md-7, .col-md-8, .col-md-9, #primary, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, #secondary, .col-md-4, #footer-widgets > ul .widget, .col-md-5, .col-md-6, #hero-widgets ul li, .col-md-7, .col-md-8, .col-md-9, #primary, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -2421,7 +2421,7 @@ pre code {
     width: 25%;
   }
 
-  .col-md-4 {
+  .col-md-4, #footer-widgets > ul .widget {
     width: 33.33333%;
   }
 
@@ -4619,20 +4619,22 @@ tbody.collapse.in {
   }
 }
 
-.container > .navbar-header, #hero-widgets > .navbar-header, .content-area > section ul > .navbar-header,
+.container > .navbar-header, #hero-widgets > .navbar-header, .content-area > section ul > .navbar-header, #footer-widgets > .navbar-header,
 .container > .navbar-collapse,
 #hero-widgets > .navbar-collapse,
 .content-area > section ul > .navbar-collapse,
+#footer-widgets > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
 }
 @media (min-width: 768px) {
-  .container > .navbar-header, #hero-widgets > .navbar-header, .content-area > section ul > .navbar-header,
+  .container > .navbar-header, #hero-widgets > .navbar-header, .content-area > section ul > .navbar-header, #footer-widgets > .navbar-header,
   .container > .navbar-collapse,
   #hero-widgets > .navbar-collapse,
   .content-area > section ul > .navbar-collapse,
+  #footer-widgets > .navbar-collapse,
   .container-fluid > .navbar-header,
   .container-fluid > .navbar-collapse {
     margin-right: 0;
@@ -4689,7 +4691,7 @@ tbody.collapse.in {
   display: block;
 }
 @media (min-width: 768px) {
-  .navbar > .container .navbar-brand, .site-header nav > .container .navbar-brand, .navbar > #hero-widgets .navbar-brand, .site-header nav > #hero-widgets .navbar-brand, .content-area > section .navbar > ul .navbar-brand, .site-header .content-area > section nav > ul .navbar-brand, .content-area > section .site-header nav > ul .navbar-brand, .navbar > .container-fluid .navbar-brand, .site-header nav > .container-fluid .navbar-brand {
+  .navbar > .container .navbar-brand, .site-header nav > .container .navbar-brand, .navbar > #hero-widgets .navbar-brand, .site-header nav > #hero-widgets .navbar-brand, .content-area > section .navbar > ul .navbar-brand, .site-header .content-area > section nav > ul .navbar-brand, .content-area > section .site-header nav > ul .navbar-brand, .navbar > #footer-widgets .navbar-brand, .site-header nav > #footer-widgets .navbar-brand, .navbar > .container-fluid .navbar-brand, .site-header nav > .container-fluid .navbar-brand {
     margin-left: -15px;
   }
 }
@@ -5356,17 +5358,17 @@ a.badge:hover, a.badge:focus {
 .jumbotron > hr {
   border-top-color: #d5d5d5;
 }
-.container .jumbotron, #hero-widgets .jumbotron, .content-area > section ul .jumbotron, .container-fluid .jumbotron {
+.container .jumbotron, #hero-widgets .jumbotron, .content-area > section ul .jumbotron, #footer-widgets .jumbotron, .container-fluid .jumbotron {
   border-radius: 6px;
 }
-.jumbotron .container, .jumbotron #hero-widgets, .jumbotron .content-area > section ul, .content-area > section .jumbotron ul {
+.jumbotron .container, .jumbotron #hero-widgets, .jumbotron .content-area > section ul, .content-area > section .jumbotron ul, .jumbotron #footer-widgets {
   max-width: 100%;
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
     padding: 48px 0;
   }
-  .container .jumbotron, #hero-widgets .jumbotron, .content-area > section ul .jumbotron, .container-fluid .jumbotron {
+  .container .jumbotron, #hero-widgets .jumbotron, .content-area > section ul .jumbotron, #footer-widgets .jumbotron, .container-fluid .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -7174,7 +7176,7 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  min-height: 60px;
 }
 
 /**
@@ -7188,45 +7190,28 @@ body {
 .content-area > section ul li {
   list-style: none;
   padding: 60px 15px 60px;
+}
+
+/**
+ * footer
+ */
+#footer-widgets > ul {
+  padding: 0;
+}
+#footer-widgets > ul .widget {
+  margin-top: 10px;
+}
+#footer-widgets ul.menu {
+  padding: 0;
+}
+#footer-widgets ul.menu li.menu-item {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 /**
  * Default WordPress stuff.
  */
-/**
- * Sticky footer from getbootstrap.com
- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-
-#colophon {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-}
-
-/**
- * Home layout
- */
-.content-area > section ul {
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.content-area > section ul li {
-  list-style: none;
-  padding: 60px 15px 60px;
-}
-
 /**
  * Sidebar basic settings
  */
@@ -7254,25 +7239,51 @@ article figure {
   max-width: 100%;
 }
 
+body {
+  background-image: url("../images/bg-bandolf.png");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 /**
  * Glow effect
  */
-.text-glow, .navbar-brand a, #get-started {
+.text-glow, .site-header nav .navbar-brand a, #get-started {
   text-shadow: 0 0 0 #00FAFF, 0 0 7px #fff, 0 0 0 #00FF2E;
   transition: text-shadow 1s;
 }
 
-.text-glow-hover:hover, nav a:hover, #get-started:hover {
+.text-glow-hover:hover, .site-header nav a:hover, #get-started:hover {
   text-shadow: -2px -1px 8px #00FAFF, 0 0 10px #fff, 3px 3px 9px #00FF2E;
   transition: text-shadow 1s;
 }
 
-nav a {
+.site-header .navbar-minimal {
+  border-top: none;
+}
+
+.site-header nav {
+  margin: 0;
+  background: transparent;
+  padding: 10px 0;
+  transition: background 500ms, padding 1s;
+}
+.site-header nav a {
   font-family: Primus;
   font-size: 20px;
 }
 
-.navbar-brand a {
+.site-header nav.compact {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background: rgba(51, 51, 51, 0.8);
+  padding: 0px 0;
+  transition: background 500ms, padding 1s;
+}
+
+.site-header nav .navbar-brand a {
   color: #fff;
   font-size: 30px;
 }
@@ -7284,15 +7295,21 @@ nav a {
 #get-started {
   display: block;
   text-align: center;
-  color: #33b73b;
   font-size: 40px;
+  color: #fff;
 }
 
-#home-widgets, #home-widgets-2 {
-  background: #222;
+#home-widgets, #home-widgets-2, #colophon {
+  background: #111;
 }
 
 #home-widgets-3 {
-  margin-top: 100px;
-  background: rgba(51, 51, 51, 0.36);
+  background: rgba(51, 51, 51, 0.8);
+}
+
+/**
+ * Footer
+ */
+.widget {
+  list-style: none;
 }

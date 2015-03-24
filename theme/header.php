@@ -7,7 +7,6 @@
 	 * @since ncgbase 1.0
 	 */
 ?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="ie ie-no-support" <?php language_attributes();?>> <![endif]-->
 <!--[if IE 7]>         <html class="ie ie7" <?php language_attributes();?>> <![endif]-->

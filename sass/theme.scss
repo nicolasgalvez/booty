@@ -7,9 +7,20 @@
 /**
  * Default WordPress stuff.
  */
-@import "bandolf/_layout.scss"; // the most common layout.
+//@import "bandolf/_layout.scss"; // the most common layout.
 @import "wordpress/_sidebar.scss"; // the most common layout.
 @import "wordpress/_ncg_wordpress.scss";
+
+body {
+	background-image: url("../images/bg-bandolf.png");
+	background-position: top;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.home {
+
+}
 
 /**
  * Glow effect
@@ -22,15 +33,30 @@
 	text-shadow: -2px -1px 8px #00FAFF, 0 0 10px #fff, 3px 3px 9px #00FF2E;
 	transition: text-shadow 1s;
 }
-
-nav a {
-	font-family: Primus;
-	font-size: 20px;
-	@extend .text-glow-hover;
-	
+.site-header .navbar-minimal {
+	border-top: none;
+}
+.site-header nav {
+	margin: 0;
+		background: transparent;
+		padding: 10px 0;
+		transition: background 500ms, padding 1s;
+	a {
+		font-family: Primus;
+		font-size: 20px;
+		@extend .text-glow-hover;
+	}
+}
+.site-header nav.compact {
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+		background: rgba(51, 51, 51, 0.8);
+		padding: 0px 0;
+		transition: background 500ms, padding 1s;
 }
 
-.navbar-brand a {
+.site-header nav .navbar-brand a {
 	color: #fff;
 	font-size: 30px;
 	@extend .text-glow;
@@ -48,18 +74,21 @@ nav a {
 #get-started {
 	display: block;
 	text-align: center;
-	color: #33b73b;
 	font-size: 40px;
+	color: #fff;
 	@extend .text-glow, .text-glow-hover;
 }
-#home-widgets, #home-widgets-2 {
-	background: #222;
+
+#home-widgets, #home-widgets-2, #colophon {
+	background: #111;
 }
 #home-widgets-3 {
-	margin-top: 100px;
-	background: rgba(51, 51, 51, 0.36);
-
+	background: rgba(51, 51, 51, 0.8);
 }
 
-
-
+/**
+ * Footer
+ */
+.widget {
+	list-style: none;
+}

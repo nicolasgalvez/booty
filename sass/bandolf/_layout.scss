@@ -29,7 +29,7 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  min-height: 60px;
 }
 
 // end sticky bottom
@@ -57,5 +57,28 @@ body {
       list-style: none;
       padding: 60px 15px 60px;
     }
+  }
+}
+
+
+/**
+ * footer
+ */
+
+#footer-widgets {
+  @extend .container;
+  >ul {
+    padding: 0;
+    .widget {
+      margin-top: 10px;
+      @extend .col-md-4;
+    }
+  }
+  ul.menu {
+    padding: 0;
+    li.menu-item {
+    display: inline-block;
+    margin-right: 10px;
+  }
   }
 }

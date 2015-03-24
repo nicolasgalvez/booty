@@ -13,7 +13,7 @@ get_header(); ?>
 			<ul>
 			<?php dynamic_sidebar( 'hero-widgets' ); ?>
 			</ul>
-			<a id = "get-started" >
+			<a href = "#home-widgets" id = "get-started" >
 				<span class = "glyphicon glyphicon-chevron-down"></span>
 			</a>
 			
