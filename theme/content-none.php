@@ -36,7 +36,6 @@
 
 	</div><!-- .page-content -->
 	<footer class="entry-footer">
-		<?php booty_entry_meta();?>
 	</footer><!-- .entry-footer -->
 </section><!-- .no-results -->
 </article>

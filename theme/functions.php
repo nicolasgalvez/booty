@@ -71,6 +71,7 @@
 	 * Register main navigation menu
 	 */
 	register_nav_menu('main-menu', __('Your sites main nav menu', 'booty'));
+	register_nav_menu('home-menu', __('Your sites home page nav menu', 'booty'));
 
 	/**
 	 * Register widget areas.
