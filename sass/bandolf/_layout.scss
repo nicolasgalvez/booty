@@ -47,7 +47,7 @@ body {
     }
   }
 }
-.content-area>section {
+.home .content-area>section {
   ul {
     padding: 0;
     margin-top: 0;
@@ -60,6 +60,14 @@ body {
   }
 }
 
+body:not(.home) {
+  #content {
+    @extend .container;
+    #main {
+      @extend .row;
+    }
+  }
+}
 
 /**
  * footer

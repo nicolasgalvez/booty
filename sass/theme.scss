@@ -3,6 +3,7 @@
  */
 //@import "cosmos/ncg_cosmos.scss"; // super space theme.
 @import "bandolf/default"; // super default theme
+@import "../fonts/bandolf/stylesheet.css";
 
 /**
  * Default WordPress stuff.
@@ -42,7 +43,7 @@ body {
 		padding: 10px 0;
 		transition: background 500ms, padding 1s;
 	a {
-		font-family: Primus;
+		font-family: primusdemo;
 		font-size: 20px;
 		@extend .text-glow-hover;
 	}
@@ -63,7 +64,7 @@ body {
 }
 
 .widgettitle {
-	font-family: Primus;
+	font-family: primusdemo;
 }
 #hero-widgets {
 	.textwidget {
@@ -83,7 +84,18 @@ body {
 	background: #111;
 }
 #home-widgets-3 {
-	background: rgba(51, 51, 51, 0.8);
+	background: rgba(0, 0, 0, 0.8);
+}
+
+/**
+ * Other pages
+ */
+
+body:not(.home) {
+	#content {
+		background: #efefef;
+		color: #333;
+	}
 }
 
 /**
@@ -91,4 +103,12 @@ body {
  */
 .widget {
 	list-style: none;
+}
+
+/**
+ * Images
+ */
+
+.textwidget img {
+	@extend .img-responsive;
 }

@@ -31,9 +31,14 @@
 	 *
 	 * @param array   $args Arguments
 	 */
+	if (is_front_page()) {
+		$menu = "home-menu";
+	} else {
+		$menu = "main-menu";
+	}
 	$args = array(
-		'menu' => 'main-menu',
-		'theme_location' => 'main-menu',
+		'menu' => $menu,
+		'theme_location' => $menu,
 		'depth' => 2,
 		'container' => 'div',
 		'container_class' => 'collapse navbar-collapse',
