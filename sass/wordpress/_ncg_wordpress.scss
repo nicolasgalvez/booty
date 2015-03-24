@@ -10,6 +10,9 @@
 .site-header nav {
 	@extend .navbar, .navbar-default;
 }
+.site-header nav.stuck {
+	@extend .navbar, .navbar-inverse;
+}
 
 /**
  * Image styles

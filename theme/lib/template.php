@@ -80,7 +80,7 @@ function booty_entry_meta( $slug = 'default' ) {
  * @param Mixed   $vars Optional. Vars to pass to slug-name.php
  * @return [type]       [description]
  */
-function booty_partial( $slug, $name = "", $vars ) {
+function booty_partial( $slug, $name = "", $vars = NULL ) {
 	// if any vars are passed, give them to the partial.
 	// The partial is required, so it doesn't have access to any variables unless global is used or the set_query_var fuction.
 	if ( isset( $vars ) ) {

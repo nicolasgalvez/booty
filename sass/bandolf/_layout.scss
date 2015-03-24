@@ -1,0 +1,84 @@
+// _layout.scss
+
+.site {
+	//@extend .container;
+}
+
+#primary {
+  @extend .col-md-9;
+}
+#secondary {
+  @extend .col-md-3;
+}
+
+/**
+ * Sticky footer from getbootstrap.com
+ */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+#colophon {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  min-height: 60px;
+}
+
+// end sticky bottom
+
+/**
+ * Home layout
+ */
+
+#hero-widgets {
+  @extend .container;
+  ul {
+    @extend .row;
+    li {
+      @extend .col-md-offset-3, .col-md-6;
+    }
+  }
+}
+.content-area>section {
+  ul {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom:0;
+    @extend .container;
+    li {
+      list-style: none;
+      padding: 60px 15px 60px;
+    }
+  }
+}
+
+
+/**
+ * footer
+ */
+
+#footer-widgets {
+  @extend .container;
+  >ul {
+    padding: 0;
+    .widget {
+      margin-top: 10px;
+      @extend .col-md-4;
+    }
+  }
+  ul.menu {
+    padding: 0;
+    li.menu-item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  }
+}

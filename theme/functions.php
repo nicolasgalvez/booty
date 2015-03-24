@@ -89,13 +89,35 @@
 		register_sidebar(array(
 			'id' => 'hero-widgets',
 			'name' => __('Hero Widgets', 'booty'),
-			'description' => __('Below menu on the front page, this is for full-width widgets like a slider.', 'booty')
+			'description' => __('Overlay for that video', 'booty')
 		));	
 		register_sidebar(array(
 			'id' => 'home-widgets',
 			'name' => __('Home featured', 'booty'),
 			'description' => __('This is the area right under the video on the home page.', 'booty')
 		));
+		register_sidebar(array(
+			'id' => 'home-widgets-1',
+			'name' => __('Home featured 1', 'booty'),
+			'description' => __('Transparent under the vid', 'booty')
+		));
+
+		register_sidebar(array(
+			'id' => 'home-widgets-2',
+			'name' => __('Home featured 2', 'booty'),
+			'description' => __('Another solid section on the home page', 'booty')
+		));
+		register_sidebar(array(
+			'id' => 'home-widgets-3',
+			'name' => __('Home featured 3', 'booty'),
+			'description' => __('This is the last area on the home page. Contact form anyone?', 'booty')
+		));
+		register_sidebar(array(
+			'id' => 'footer-widgets',
+			'name' => __('Footer Widgets', 'booty'),
+			'description' => __('The footer widgets', 'booty')
+		));
+
 
 	}
 	add_action('widgets_init', 'register_sidebars');
@@ -134,22 +156,7 @@
 
 	add_filter('wp_title', 'booty_wp_title', 10, 2);
 
-/**
- * Remove the damn admin bar margin
- */
-	function booty_filter_head() {
-		remove_action('wp_head', '_admin_bar_bump_cb');
-		// Move the margin to a better element:
-		 ?>
-		<style type="text/css" media="screen">
-			.admin-bar { margin-top: 32px !important; }
-			@media screen and ( max-width: 782px ) {
-				.admin-bar { margin-top: 46px !important; }
-			}
-		</style>
-		<?php
-	}
-	add_action('get_header', 'booty_filter_head');
+
 
 	/**
 	 * This adds the custom post types to the blog feed.
