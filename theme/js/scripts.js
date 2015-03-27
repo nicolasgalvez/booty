@@ -77,18 +77,20 @@ jQuery(document).ready(function($) {
 	/**
 	 * Compact Navbar
 	 */
-	$(window).scroll(function() {
-		// find the li with class 'active' and remove it
-		//$("ul.menu-bottom li.active").removeClass("active");
-		// get the amount the window has scrolled
-		var scroll = $(window).scrollTop();
-		// add the 'active' class to the correct li based on the scroll amount
-		if (scroll >= 1) {
-			$(".site-header nav").addClass("compact");
-		} else {
-			$(".site-header nav").removeClass("compact");
-		}
-	});
+	if ($('body').hasClass('home')) {
+		$(window).scroll(function() {
+			// find the li with class 'active' and remove it
+			//$("ul.menu-bottom li.active").removeClass("active");
+			// get the amount the window has scrolled
+			var scroll = $(window).scrollTop();
+			// add the 'active' class to the correct li based on the scroll amount
+			if (scroll >= 1) {
+				$(".site-header nav").addClass("compact");
+			} else {
+				$(".site-header nav").removeClass("compact");
+			}
+		});
+	}
 
 	//$('.home-widgets .widget_nav_menu').scroll_navi();
 	// @todo add the needed height offset when logged in.
