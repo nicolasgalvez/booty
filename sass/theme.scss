@@ -3,6 +3,7 @@
  */
 //@import "cosmos/ncg_cosmos.scss"; // super space theme.
 @import "bandolf/default"; // super default theme
+// get fonts`
 @import "../fonts/bandolf/stylesheet.css";
 
 /**
@@ -17,6 +18,7 @@ body {
 	background-position: top;
 	background-attachment: fixed;
 	background-size: cover;
+	font-family: Raleway;
 }
 
 .home {
@@ -63,9 +65,11 @@ body {
 	@extend .text-glow;
 }
 
-.widgettitle {
+// Famous Titles for $400
+.entry-title, .widgettitle {
 	font-family: primusdemo;
 }
+
 #hero-widgets {
 	.textwidget {
 		@extend .lead;
@@ -96,6 +100,22 @@ body:not(.home) {
 		background: #efefef;
 		color: #333;
 	}
+}
+body:not(.single) {
+  article:nth-child(even) {
+  background: #F8F8F8;
+  }
+  article:nth-child(odd) {
+    background: #fdfdfd;
+  }
+}
+body:not(.home) {
+  #primary {
+    box-shadow: 0 0 4px #959595;
+  }
+}
+.entry-header {
+	border-bottom: 1px solid #ddd;
 }
 
 /**

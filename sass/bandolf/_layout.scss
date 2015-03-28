@@ -5,9 +5,11 @@
 }
 
 #primary {
+  overflow: hidden;
   @extend .col-md-9;
 }
 #secondary {
+  overflow: hidden;
   @extend .col-md-3;
 }
 
@@ -31,7 +33,6 @@ body {
   /* Set the fixed height of the footer here */
   min-height: 60px;
 }
-
 // end sticky bottom
 
 /**
@@ -68,6 +69,35 @@ body:not(.home) {
     }
   }
 }
+
+
+/**
+ * Post Archive View
+ */
+
+article {
+  padding-bottom: 50px;
+  @extend .row;
+}
+.entry-header {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  @extend .col-md-12;
+}
+.entry-content {
+  @extend .col-md-12;
+}
+.post-thumbnail {
+  @extend .col-md-6;
+}
+// if there is a thumbnail, lets give it half the width. Thanks.
+.post-thumbnail+.entry-content.excerpt {
+  @extend .col-md-6;
+}
+.entry-footer {
+  @extend .col-md-12;
+}
+
 
 /**
  * footer
