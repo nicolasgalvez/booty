@@ -18,6 +18,7 @@
 			else :
 				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 			endif;
+			booty_entry_meta();
 		?>
 		
 	</header><!-- .entry-header -->
@@ -33,6 +34,7 @@
 				__( 'Continue reading %s', 'booty' ),
 				the_title( '<span class="screen-reader-text">', '</span>', false )
 			) ); ?>
+			<hr>
 		<?php else : ?>
 			<div class="entry-content excerpt">
 			<?php	/* translators: %s: Name of current post */
@@ -53,15 +55,15 @@
 	?>
 	</div><!-- .entry-content -->
 
-	<?php
-		// Author bio.
-		if ( is_single() || is_page() && get_the_author_meta( 'description' ) ) :
-			get_template_part( 'author-bio' );
-		endif;
 
-	?>
 
 	<footer class="entry-footer">
-		<?php booty_entry_meta();?>
+		<?php
+		// Author bio.
+		if ( is_single() || is_page() && get_the_author_meta( 'description' ) ) :
+				get_template_part( 'author-bio' );
+			endif;
+		?>
 	</footer><!-- .entry-footer -->
+
 </article><!-- #post-## -->

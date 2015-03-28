@@ -29,14 +29,13 @@
 
 		<?php else : ?>
 
-			<h2><?php _e( '?SYNTAX ERROR.', 'booty' ); ?></h2>
+			<h3><?php _e( 'Abort, Fail, Retry?', 'booty' ); ?></h3>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>
 
 	</div><!-- .page-content -->
 	<footer class="entry-footer">
-		<?php booty_entry_meta();?>
 	</footer><!-- .entry-footer -->
 </section><!-- .no-results -->
 </article>

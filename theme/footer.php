@@ -10,11 +10,16 @@
 
 			</div> <!-- End #site -->
 		<footer id = "colophon">
-			<div class = "container">
-				<div class = "row">
-					<?php booty_copyright(); ?>
-				</div>
-			</div>
+			<section  id = "footer-widgets">
+				<ul class = "row">
+					<li class = "widget">
+						<?php booty_copyright(); ?>
+					</li>
+				<?php if ( is_active_sidebar( 'footer-widgets' ) ) : ?>
+					<?php dynamic_sidebar( 'footer-widgets' ); ?>
+				<?php endif; ?>
+				</ul>
+			</section>
 		</footer>
 		<?php wp_footer(); ?>
 	</body>

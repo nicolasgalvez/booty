@@ -7,6 +7,13 @@
 	@extend .row;
 }
 
+#primary {
+  @extend .col-md-9;
+}
+#secondary {
+  @extend .col-md-3;
+}
+
 /**
  * Sticky footer from getbootstrap.com
  */
@@ -28,8 +35,5 @@ body {
   height: 60px;
 }
 
-// this is the fix for the admin bar which puts 32 pix on html. Removed in functions.php
-.admin-bar {
-	margin-top: 32px;
-}
 // end sticky bottom
+
