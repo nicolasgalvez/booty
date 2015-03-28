@@ -33,7 +33,7 @@
 
 // Wow! So space! Many Stars.
 body:not(.home) {
-	background-image: url('../images/bg.jpg');
+	//background-image: url('../images/bg.jpg');
 }
 // the background video will not load on mobile so load the bg image on mobile.
 @media screen and (max-width: $screen-xs) {

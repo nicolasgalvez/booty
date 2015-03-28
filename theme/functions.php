@@ -15,6 +15,7 @@
 
 	// require_once "lib/ncg_walker_comment.php";
 	require_once "lib/wp-bootstrap-navwalker/wp_bootstrap_navwalker.php";
+	require_once "lib/customizer.php";
 	require_once "lib/bootstrap.php";
 	require_once "lib/scripts.php";
 	require_once "lib/template.php";
