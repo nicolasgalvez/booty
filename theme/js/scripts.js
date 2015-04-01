@@ -43,8 +43,14 @@ jQuery(document).ready(function($) {
 	 * Smooth Scrolling
 	 */
 	if ($('body').hasClass('home')) {
-		$('a').smoothScroll({offset: -50});
+		$('a').smoothScroll({offset: -navbarHeight});
 	}
+	/**
+	 * Scrollspyyyyy
+	 * @type {String}
+	 */
+	$('body.home').scrollspy({ target: '.site-header nav', offset: navbarHeight+1 });
+
 	/**
 	 * Map scroll fixer from
 	 * http://jsfiddle.net/0u6v4jnp/
