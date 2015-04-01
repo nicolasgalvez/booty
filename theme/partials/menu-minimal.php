@@ -12,6 +12,11 @@
 <nav class = "navbar-minimal">
 	<div class = "container">
 		<div class="navbar-header">
+			<div class = "navbar-brand">
+				<a id="site-title" href="<?php echo site_url()?>">
+					<?php echo bloginfo( 'site_title' )?>
+				</a>
+			</div>
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
 			data-target=".navbar-collapse">
 			<span class="sr-only">Toggle navigation</span>
@@ -19,11 +24,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-			<div class = "navbar-brand">
-				<a id="site-title" href="<?php echo site_url()?>">
-					<?php echo bloginfo( 'site_title' )?>
-				</a>
-			</div>
+
 		</div>
 		<?php
 	/**

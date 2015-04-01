@@ -1,228 +1,6 @@
 /**
  * Import your theme:
  */
-<<<<<<< HEAD
-/**
- * Cosmos Variables
- */
-/**
- * Lets make the header different
- */
-@import url(../fonts/cosmos/stylesheet.css);
-header.site-header {
-  font-family: "michromaregular";
-  text-transform: uppercase;
-}
-header.site-header a {
-  color: #fff;
-  text-shadow: 0 0 2px lime, 0 0 4px black;
-}
-
-/**
- * Adding the header styles
- */
-h1, h2, h3, h3, h4 {
-  font-family: "michromaregular", Georgia, "Times New Roman", Times, serif;
-}
-
-#copyright {
-  text-align: center;
-  opacity: .8;
-}
-#copyright p {
-  margin: 0;
-}
-
-p#nick-9000 {
-  font-family: "fujiyama2regular", Helvetica, Arial, sans-serif;
-  font-size: 26px;
-  text-transform: uppercase;
-  font-weight: bolder;
-  border: 1px solid #24b8d6;
-  text-shadow: -1px -1px 0 #efefef, 1px -1px 0 #efefef, -1px 1px 0 #efefef, 1px 1px 0 #efefef;
-  margin: auto;
-}
-
-#nick-9000 span {
-  width: 50%;
-  display: block;
-  float: left;
-  padding: 3px 5px;
-}
-
-#nick-9000 span:first-child {
-  text-align: right;
-  background: #24b8d6;
-  color: #24b8d6;
-}
-
-#nick-9000 span:last-child {
-  text-align: left;
-  background: #070908;
-  color: #070908;
-}
-
-/**
- * Cosmos theme styles
- */
-.glow, #primary article, #secondary > ul > li {
-  box-shadow: 0 0 20px rgba(207, 247, 188, 0.27), 0 0 200px rgba(0, 0, 0, 0.67) inset;
-  background: rgba(7, 44, 11, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 2px;
-}
-
-.background {
-  background: rgba(7, 44, 11, 0.5);
-  box-shadow: 0 0 200px rgba(0, 0, 0, 0.67) inset;
-}
-
-/**
- * Theme basics
- */
-@media screen and (max-width: 480px) {
-  body.home {
-    background-image: url("../images/bg.jpg");
-  }
-}
-a {
-  transition: all 500ms;
-}
-
-a:hover {
-  transition: all 750ms;
-}
-
-/**
- * The header
- */
-.site-header nav {
-  background: rgba(0, 0, 0, 0.6);
-  border-bottom: 1px solid rgba(239, 239, 239, 0.51);
-  margin-bottom: 20px;
-  box-shadow: 0 0 12px rgba(0, 255, 0, 0.41), -3px -3px 26px rgba(136, 137, 0, 0.26) inset;
-}
-
-.nav > li > a:hover, .nav > li > a:focus, #site-title a:hover {
-  text-shadow: 0 0 7px #fff, -2px -2px 10px #00ADFF, 2px 2px 10px #D3FF00;
-  color: #fff;
-}
-
-.navbar-toggle {
-  border-color: lime;
-}
-.navbar-toggle .icon-bar {
-  background-color: lime;
-}
-
-.brand p {
-  float: left;
-}
-
-#site-title {
-  margin: 7px 10px 0 0;
-  font-size: 20px;
-}
-
-#description {
-  margin: 17px 0 0 0;
-  font-size: 10px;
-}
-
-/**
- * The Content area
- */
-/**
- * Post/page rules
- */
-/**
- * Article styles:
- */
-#primary article {
-  margin-bottom: 20px;
-}
-#primary article .entry-footer {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: 11px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-#primary article .entry-footer div {
-  border-left: 1px solid rgba(239, 239, 239, 0.32);
-}
-#primary article .entry-footer p, #primary article .entry-footer ul {
-  margin: 0;
-}
-#primary article .entry-footer ul {
-  padding: 0;
-}
-#primary article .entry-footer ul li {
-  list-style: none;
-}
-
-header.entry-header h2, header.entry-header h1, .widgettitle {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 5px 0;
-  font-family: "michromaregular";
-  text-transform: uppercase;
-  text-shadow: 0 0 17px #fff;
-}
-header.entry-header h2 a, header.entry-header h1 a, .widgettitle a {
-  color: #fff;
-}
-
-.sticky header.entry-header h2 {
-  border-bottom: 1px solid rgba(255, 0, 0, 0.5);
-}
-
-body:not(.single) .has-post-thumbnail:not(.post_format-post-format-image) .post-thumbnail.full-width img {
-  width: 100%;
-}
-
-.post_format-post-format-image img {
-  width: 100%;
-}
-
-/**
- * Sidebar
- */
-#secondary > ul {
-  margin-top: 0;
-  padding: 0 10px;
-}
-#secondary > ul > li {
-  list-style: none;
-  margin-bottom: 20px;
-  padding: 10px 6px;
-  border-left: 1px solid 1px solid rgba(255, 255, 255, 0.48);
-}
-
-.widget .widgettitle {
-  font-size: 15px;
-  font-size: 20px;
-  margin: 0 0 6px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.29);
-}
-.widget .widgettitle a {
-  color: #fff;
-}
-.widget ul {
-  padding: 0 6px;
-}
-.widget ul li {
-  margin: 6px 0;
-  padding: 0 4px;
-  list-style: none;
-  font-size: 11px;
-  /* border-left: 1px solid rgba(255, 255, 255, 0.22); */
-  line-height: 11px;
-}
-
-/**
- * Super Unicode, wait, Shorcode Ultimate styles on home.
- */
-=======
->>>>>>> 6c4462eede59fee06fae86c07d6465bc48e9330c
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 @import url(../fonts/bandolf/stylesheet.css);
 html {
@@ -1659,7 +1437,7 @@ img {
   vertical-align: middle;
 }
 
-.img-responsive, article img, .textwidget img {
+.img-responsive, .textwidget img, article img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -2148,31 +1926,31 @@ pre code {
   overflow-y: scroll;
 }
 
-.container, #hero-widgets, .home .content-area > section ul, body:not(.home) #content, #footer-widgets {
+.container, #hero-widgets, .home .content-area > section > ul, body:not(.home) #content, #footer-widgets {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-.container:before, #hero-widgets:before, .home .content-area > section ul:before, body:not(.home) #content:before, #footer-widgets:before, .container:after, #hero-widgets:after, .home .content-area > section ul:after, body:not(.home) #content:after, #footer-widgets:after {
+.container:before, #hero-widgets:before, .home .content-area > section > ul:before, body:not(.home) #content:before, #footer-widgets:before, .container:after, #hero-widgets:after, .home .content-area > section > ul:after, body:not(.home) #content:after, #footer-widgets:after {
   content: " ";
   display: table;
 }
-.container:after, #hero-widgets:after, .home .content-area > section ul:after, body:not(.home) #content:after, #footer-widgets:after {
+.container:after, #hero-widgets:after, .home .content-area > section > ul:after, body:not(.home) #content:after, #footer-widgets:after {
   clear: both;
 }
 @media (min-width: 768px) {
-  .container, #hero-widgets, .home .content-area > section ul, body:not(.home) #content, #footer-widgets {
+  .container, #hero-widgets, .home .content-area > section > ul, body:not(.home) #content, #footer-widgets {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container, #hero-widgets, .home .content-area > section ul, body:not(.home) #content, #footer-widgets {
+  .container, #hero-widgets, .home .content-area > section > ul, body:not(.home) #content, #footer-widgets {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container, #hero-widgets, .home .content-area > section ul, body:not(.home) #content, #footer-widgets {
+  .container, #hero-widgets, .home .content-area > section > ul, body:not(.home) #content, #footer-widgets {
     width: 1170px;
   }
 }
@@ -3385,11 +3163,7 @@ output {
   color: #999999;
 }
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-<<<<<<< HEAD
-  background-color: rgba(0, 0, 0, 0.1);
-=======
   background-color: #eeeeee;
->>>>>>> 6c4462eede59fee06fae86c07d6465bc48e9330c
   opacity: 1;
 }
 .form-control[disabled], fieldset[disabled] .form-control {
@@ -4846,10 +4620,10 @@ tbody.collapse.in {
   }
 }
 
-.container > .navbar-header, #hero-widgets > .navbar-header, .home .content-area > section ul > .navbar-header, body:not(.home) #content > .navbar-header, #footer-widgets > .navbar-header,
+.container > .navbar-header, #hero-widgets > .navbar-header, .home .content-area > section > ul > .navbar-header, body:not(.home) #content > .navbar-header, #footer-widgets > .navbar-header,
 .container > .navbar-collapse,
 #hero-widgets > .navbar-collapse,
-.home .content-area > section ul > .navbar-collapse,
+.home .content-area > section > ul > .navbar-collapse,
 body:not(.home) #content > .navbar-collapse,
 #footer-widgets > .navbar-collapse,
 .container-fluid > .navbar-header,
@@ -4858,10 +4632,10 @@ body:not(.home) #content > .navbar-collapse,
   margin-left: -15px;
 }
 @media (min-width: 768px) {
-  .container > .navbar-header, #hero-widgets > .navbar-header, .home .content-area > section ul > .navbar-header, body:not(.home) #content > .navbar-header, #footer-widgets > .navbar-header,
+  .container > .navbar-header, #hero-widgets > .navbar-header, .home .content-area > section > ul > .navbar-header, body:not(.home) #content > .navbar-header, #footer-widgets > .navbar-header,
   .container > .navbar-collapse,
   #hero-widgets > .navbar-collapse,
-  .home .content-area > section ul > .navbar-collapse,
+  .home .content-area > section > ul > .navbar-collapse,
   body:not(.home) #content > .navbar-collapse,
   #footer-widgets > .navbar-collapse,
   .container-fluid > .navbar-header,
@@ -4920,7 +4694,7 @@ body:not(.home) #content > .navbar-collapse,
   display: block;
 }
 @media (min-width: 768px) {
-  .navbar > .container .navbar-brand, .site-header nav > .container .navbar-brand, .navbar > #hero-widgets .navbar-brand, .site-header nav > #hero-widgets .navbar-brand, .home .content-area > section .navbar > ul .navbar-brand, .site-header .home .content-area > section nav > ul .navbar-brand, .home .content-area > section .site-header nav > ul .navbar-brand, body:not(.home) .navbar > #content .navbar-brand, .site-header body:not(.home) nav > #content .navbar-brand, body:not(.home) .site-header nav > #content .navbar-brand, .navbar > #footer-widgets .navbar-brand, .site-header nav > #footer-widgets .navbar-brand, .navbar > .container-fluid .navbar-brand, .site-header nav > .container-fluid .navbar-brand {
+  .navbar > .container .navbar-brand, .site-header nav > .container .navbar-brand, .navbar > #hero-widgets .navbar-brand, .site-header nav > #hero-widgets .navbar-brand, .home .content-area > section.navbar > ul .navbar-brand, body:not(.home) .navbar > #content .navbar-brand, .site-header body:not(.home) nav > #content .navbar-brand, body:not(.home) .site-header nav > #content .navbar-brand, .navbar > #footer-widgets .navbar-brand, .site-header nav > #footer-widgets .navbar-brand, .navbar > .container-fluid .navbar-brand, .site-header nav > .container-fluid .navbar-brand {
     margin-left: -15px;
   }
 }
@@ -5154,7 +4928,7 @@ body:not(.home) #content > .navbar-collapse,
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a, .site-header nav .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .site-header nav .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .site-header nav .navbar-nav > .active > a:focus {
-  color: #cccccc;
+  color: white;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .disabled > a, .site-header nav .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .site-header nav .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus, .site-header nav .navbar-nav > .disabled > a:focus {
@@ -5177,7 +4951,7 @@ body:not(.home) #content > .navbar-collapse,
 }
 .navbar-default .navbar-nav > .open > a, .site-header nav .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .site-header nav .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .site-header nav .navbar-nav > .open > a:focus {
   background-color: transparent;
-  color: #cccccc;
+  color: white;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a, .site-header nav .navbar-nav .open .dropdown-menu > li > a {
@@ -5188,7 +4962,7 @@ body:not(.home) #content > .navbar-collapse,
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .site-header nav .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .site-header nav .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus, .site-header nav .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #cccccc;
+    color: white;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .site-header nav .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .site-header nav .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus, .site-header nav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -5587,17 +5361,17 @@ a.badge:hover, a.badge:focus {
 .jumbotron > hr {
   border-top-color: #d5d5d5;
 }
-.container .jumbotron, #hero-widgets .jumbotron, .home .content-area > section ul .jumbotron, body:not(.home) #content .jumbotron, #footer-widgets .jumbotron, .container-fluid .jumbotron {
+.container .jumbotron, #hero-widgets .jumbotron, .home .content-area > section > ul .jumbotron, body:not(.home) #content .jumbotron, #footer-widgets .jumbotron, .container-fluid .jumbotron {
   border-radius: 6px;
 }
-.jumbotron .container, .jumbotron #hero-widgets, .jumbotron .home .content-area > section ul, .home .content-area > section .jumbotron ul, .jumbotron body:not(.home) #content, body:not(.home) .jumbotron #content, .jumbotron #footer-widgets {
+.jumbotron .container, .jumbotron #hero-widgets, .jumbotron .home .content-area > section > ul, .home .jumbotron .content-area > section > ul, .jumbotron body:not(.home) #content, body:not(.home) .jumbotron #content, .jumbotron #footer-widgets {
   max-width: 100%;
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
     padding: 48px 0;
   }
-  .container .jumbotron, #hero-widgets .jumbotron, .home .content-area > section ul .jumbotron, body:not(.home) #content .jumbotron, #footer-widgets .jumbotron, .container-fluid .jumbotron {
+  .container .jumbotron, #hero-widgets .jumbotron, .home .content-area > section > ul .jumbotron, body:not(.home) #content .jumbotron, #footer-widgets .jumbotron, .container-fluid .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -6626,11 +6400,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-<<<<<<< HEAD
-  font-family: "fujiyama2regular", Helvetica, Arial, sans-serif;
-=======
   font-family: "Raleway", Helvetica, Arial, sans-serif;
->>>>>>> 6c4462eede59fee06fae86c07d6465bc48e9330c
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -7088,11 +6858,11 @@ button.close {
     bottom: 20px;
   }
 }
-.clearfix:before, .clearfix:after {
+.clearfix:before, .textwidget:before, .clearfix:after, .textwidget:after {
   content: " ";
   display: table;
 }
-.clearfix:after {
+.clearfix:after, .textwidget:after {
   clear: both;
 }
 
@@ -7423,12 +7193,12 @@ body {
 /**
  * Home layout
  */
-.home .content-area > section ul {
+.home .content-area > section > ul {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
-.home .content-area > section ul li {
+.home .content-area > section > ul .widget {
   list-style: none;
   padding: 60px 15px 60px;
 }
@@ -7462,41 +7232,7 @@ article {
   margin-right: 10px;
 }
 
-/**
- * Default WordPress stuff.
- */
-/**
- * Sidebar basic settings
- */
-#secondary ul {
-  list-style: none;
-  padding: 0;
-}
-
-.widget_search {
-  padding: 10px 0 0;
-}
-
-/**
- * WordPress Styles
- * This contains the basic WordPress rules found in most themes.
- */
-.skip-link, .screen-reader-text {
-  display: none;
-}
-
-/**
- * Image styles
- */
-article figure {
-  max-width: 100%;
-}
-
 body {
-<<<<<<< HEAD
-  background-size: cover;
-}
-=======
   background-image: url("../images/bg-bandolf.png");
   background-position: top;
   background-attachment: fixed;
@@ -7546,8 +7282,23 @@ body {
   font-size: 30px;
 }
 
+.site-header nav .navbar-nav > li > a:focus {
+  color: #aaa;
+}
+
 .entry-title, .widgettitle {
   font-family: primusdemo;
+}
+
+.textwidget {
+  font-size: 16px;
+}
+.textwidget ul {
+  margin-bottom: 10px;
+}
+
+#hero-widgets .textwidget {
+  text-shadow: -1px -1px #333, 2px 2px 6px #000;
 }
 
 #get-started {
@@ -7559,6 +7310,10 @@ body {
 
 #home-widgets, #home-widgets-2, #colophon {
   background: #111;
+}
+
+#home-widgets-1 {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #home-widgets-3 {
@@ -7598,4 +7353,145 @@ body:not(.home) #primary {
 /**
  * Images
  */
->>>>>>> 6c4462eede59fee06fae86c07d6465bc48e9330c
+/**
+ * Default WordPress stuff.
+ */
+/**
+ * Sidebar basic settings
+ */
+#secondary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.widget_search {
+  padding: 10px 0 0;
+}
+
+/**
+ * WordPress Styles
+ * This contains the basic WordPress rules found in most themes.
+ */
+.skip-link, .screen-reader-text {
+  display: none;
+}
+
+/**
+ * Image styles
+ */
+article figure {
+  max-width: 100%;
+}
+
+body {
+  background-size: cover;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
