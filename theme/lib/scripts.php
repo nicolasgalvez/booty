@@ -23,6 +23,10 @@
 		if (is_singular()) {
 			wp_enqueue_script('comment-reply');
 		}
+
+		if(is_page_template('angular-template.php')) {
+			wp_enqueue_script('angular', get_template_directory_uri() . '/js/vendor/angular/angular.min.js', array(), '1.0', true);
+		}
 	}
 
 	add_action('wp_enqueue_scripts', 'booty_enqueue_scripts');

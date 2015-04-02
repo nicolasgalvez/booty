@@ -19,6 +19,7 @@
 	require_once "lib/bootstrap.php";
 	require_once "lib/scripts.php";
 	require_once "lib/template.php";
+	require_once "lib/ajax.php";
 
 	/**
 	 * Theme support
