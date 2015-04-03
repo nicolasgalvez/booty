@@ -9,6 +9,10 @@ jQuery(document).ready(function($) {
 	var navbarHeight = $('.site-header nav').height();
 	console.log(navbarHeight);
 	console.log($(window).height());
+
+	// Make the footer sticky while allowing dynamic height
+	$('body').css('margin-bottom', $('#colophon').height());
+
 	/**
 	 * Resize slider
 	 */
@@ -46,7 +50,7 @@ jQuery(document).ready(function($) {
 		$('a').smoothScroll({offset: -navbarHeight});
 	}
 	/**
-	 * Scrollspyyyyy
+	 * Scrollspy
 	 * @type {String}
 	 */
 	$('body.home').scrollspy({ target: '.site-header nav', offset: navbarHeight+1 });
