@@ -7233,7 +7233,6 @@ article {
 }
 
 body {
-  background-image: url("../images/bg-bandolf.png");
   background-position: top;
   background-attachment: fixed;
   background-size: cover;
@@ -7253,6 +7252,9 @@ body {
   transition: text-shadow 1s;
 }
 
+/**
+ * Header minimal
+ */
 .site-header .navbar-minimal {
   border-top: none;
 }
@@ -7286,6 +7288,9 @@ body {
   color: #aaa;
 }
 
+/**
+ * Entries
+ */
 .entry-title, .widgettitle {
   font-family: primusdemo;
 }
@@ -7297,6 +7302,9 @@ body {
   margin-bottom: 10px;
 }
 
+/**
+ * Home widgets
+ */
 #hero-widgets .textwidget {
   text-shadow: -1px -1px #333, 2px 2px 6px #000;
 }
@@ -7343,6 +7351,10 @@ body:not(.home) #primary {
   border-bottom: 1px solid #ddd;
 }
 
+body:not(.single) article.sticky > header {
+  border-bottom: solid 3px #33B73B;
+}
+
 /**
  * Footer
  */
@@ -7353,6 +7365,22 @@ body:not(.home) #primary {
 /**
  * Images
  */
+/**
+ * Custom post formats
+ */
+.post_format-post-format-image .post-thumbnail {
+  margin: 10px 0;
+  padding: 0;
+  width: 100%;
+}
+.post_format-post-format-image .attachment-post-thumbnail {
+  width: 100%;
+}
+
+body.single .post_format-post-format-image .entry-title {
+  font-size: 16px;
+}
+
 /**
  * Default WordPress stuff.
  */
@@ -7454,7 +7482,6 @@ a img.aligncenter {
   border: 0 none;
   height: auto;
   margin: 0;
-  max-width: 98.5%;
   padding: 0;
   width: auto;
 }
@@ -7463,7 +7490,7 @@ a img.aligncenter {
   font-size: 11px;
   line-height: 17px;
   margin: 0;
-  padding: 0 4px 5px;
+  padding: 3px 4px 5px;
 }
 
 /* Text meant only for screen readers. */

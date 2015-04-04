@@ -20,6 +20,11 @@ body {
 	text-shadow: -2px -1px 8px #00FAFF, 0 0 10px #fff, 3px 3px 9px #00FF2E;
 	transition: text-shadow 1s;
 }
+
+/**
+ * Header minimal
+ */
+
 .site-header .navbar-minimal {
 	border-top: none;
 }
@@ -53,6 +58,10 @@ body {
 	color: #aaa;
 }
 
+/**
+ * Entries
+ */
+
 // Famous Titles for $400
 .entry-title, .widgettitle {
 	font-family: primusdemo;
@@ -69,6 +78,10 @@ body {
 		margin-bottom: 10px;
 	}
 }
+
+/**
+ * Home widgets
+ */
 
 #hero-widgets {
 	.textwidget {
@@ -99,12 +112,15 @@ body {
  * Other pages
  */
 
+// set the bg color for the content area
 body:not(.home) {
 	#content {
 		background: #efefef;
 		color: #333;
 	}
 }
+
+// Add alternating backgrounds.
 body:not(.single) {
   article:nth-child(even) {
   background: #F8F8F8;
@@ -113,6 +129,7 @@ body:not(.single) {
     background: #fdfdfd;
   }
 }
+// post borders.
 body:not(.home) {
   #primary {
     box-shadow: 0 0 4px #959595;
@@ -120,6 +137,10 @@ body:not(.home) {
 }
 .entry-header {
 	border-bottom: 1px solid #ddd;
+}
+// sticky posts will have a highlighted border on the header.
+body:not(.single) article.sticky > header {
+border-bottom: solid 3px #33B73B;
 }
 
 /**
@@ -135,4 +156,27 @@ body:not(.home) {
 
 .textwidget img {
 	@extend .img-responsive;
+}
+
+/**
+ * Custom post formats
+ */
+
+// image post format
+.post_format-post-format-image {
+	.post-thumbnail {
+		margin: 10px 0;
+		padding: 0;
+		width: 100%;
+	}
+	.attachment-post-thumbnail {
+		width: 100%;
+	}
+}
+body.single {
+	.post_format-post-format-image {
+		.entry-title {
+			font-size: 16px;
+		}
+	}
 }

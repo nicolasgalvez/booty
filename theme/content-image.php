@@ -15,16 +15,15 @@
 		<?php
 if ( is_single() || is_page() ) :
 	the_title( '<h1 class="entry-title">', '</h1>' );
+	booty_entry_meta();
 else :
-	the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+	// Post thumbnail.
+	booty_post_thumbnail();
+
+	the_title( sprintf( '<p class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' );
 endif;
 ?>
-
 	</header><!-- .entry-header -->
-	<?php
-// Post thumbnail.
-booty_post_thumbnail();
-?>
 	<?php if ( is_single() || is_page() ) : ?>
 		<div class="entry-content">
 			<?php /* translators: %s: Name of current post */
@@ -34,17 +33,10 @@ booty_post_thumbnail();
 		) ); ?>
 		</div><!-- .entry-content -->
 		<?php endif; ?>
-		<?php wp_link_pages( array(
-		'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'booty' ) . '</span>',
-		'after'       => '</div>',
-		'link_before' => '<span>',
-		'link_after'  => '</span>',
-		'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'booty' ) . ' </span>%',
-		'separator'   => '<span class="screen-reader-text">, </span>',
-	) );
-?>
-
 	<footer class="entry-footer">
+	<?php if ( !is_single() && !is_page() ) : ?>
 		<?php booty_entry_meta();?>
+	<?php endif; ?>
 	</footer><!-- .entry-footer -->
+
 </article><!-- #post-## -->
