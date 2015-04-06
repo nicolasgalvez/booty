@@ -7,8 +7,11 @@ jQuery(document).ready(function($) {
 
 	//console.log('hi'); //test that grunt is compiling this.
 	var navbarHeight = $('.site-header nav').height();
-	console.log(navbarHeight);
-	console.log($(window).height());
+	//console.log(navbarHeight);
+	//console.log($(window).height());
+	console.log('%cHi folks!', 'background: #f00; color: #fff; font-family: primus; padding: 5px 0');
+	console.log('%cme@nicolasgalvez.com', 'background: #0f0; color: #111; font-family: primus;  padding: 5px 0');
+	console.log('%csee ya round', 'background: #00f; color: #fff; font-family: primus; padding: 5px 0');
 
 	// Make the footer sticky while allowing dynamic height
 	$('body').css('margin-bottom', $('#colophon').height());
